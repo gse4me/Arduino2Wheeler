@@ -46,15 +46,30 @@
     <avrtoolserialnumber />
     <avrdeviceexpectedsignature>0x1E950F</avrdeviceexpectedsignature>
     <com_atmel_avrdbg_tool_simulator>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>
+        </InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolNumber>
+      </ToolNumber>
+      <ToolName>Simulator</ToolName>
+    </com_atmel_avrdbg_tool_simulator>
+    <avrtoolinterface />
+    <custom>
       <ToolOptions xmlns="">
         <InterfaceProperties>
         </InterfaceProperties>
+        <InterfaceName>
+        </InterfaceName>
       </ToolOptions>
-      <ToolType xmlns="">com.atmel.avrdbg.tool.simulator</ToolType>
+      <ToolType xmlns="">custom</ToolType>
       <ToolNumber xmlns="">
       </ToolNumber>
-      <ToolName xmlns="">Simulator</ToolName>
-    </com_atmel_avrdbg_tool_simulator>
+      <ToolName xmlns="">Custom Programming Tool</ToolName>
+    </custom>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <ToolchainSettings>
@@ -245,7 +260,7 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Configs.h">
+    <Compile Include="include\Configs.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="include\libraries\Arduino-PID-Library-master\PID_v1.h">
@@ -278,13 +293,19 @@
     <Compile Include="include\MPU6050Calib.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="include\Motors.h">
+    <Compile Include="include\my_libs\ENC_lib.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\my_libs\MOT_lib.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="include\my_libs\pwm_basic.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="include\my_libs\pwm_basic_example.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\Utils.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="Sketch.cpp">
@@ -311,7 +332,10 @@
     <Compile Include="src\MPU6050Calib.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\Motors.cpp">
+    <Compile Include="src\my_libs\ENC_lib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\my_libs\MOT_lib.cpp">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\my_libs\pwm_basic.c">

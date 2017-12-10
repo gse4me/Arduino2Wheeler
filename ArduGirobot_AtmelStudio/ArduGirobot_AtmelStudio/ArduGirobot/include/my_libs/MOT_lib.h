@@ -1,15 +1,10 @@
-/*
- * MyPWM.h
- *
- * Created: 11/18/2017 4:17:31 PM
- *  Author: vsand
- */
 
 
 #ifndef MYPWM_H_
 #define MYPWM_H_
 
 #include <Arduino.h>
+#include "Configs.h"
 
 #define FWD 0
 #define REV 1
@@ -39,12 +34,6 @@ void Motor1_SetSpeed(uint8_t dir,uint8_t speed);
 void Motors_SetSpeed(int leftMotorSpeed, int rightMotorSpeed);
 
 
-extern long Mot0_Enc;
-extern long Mot1_Enc;
 
-extern uint8_t Mot0_Dir;
-extern uint8_t Mot1_Dir;
-
-void Enc_Init();
 
 #endif /* MYPWM_H_ */

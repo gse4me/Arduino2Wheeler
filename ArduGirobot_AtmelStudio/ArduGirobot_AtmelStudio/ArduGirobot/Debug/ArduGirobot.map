@@ -1,7 +1,7 @@
 Archive member included to satisfy reference by file (symbol)
 
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
-                              src/libraries/Arduino-PID-Library-master/PID_v1.o (__subsf3)
+                              Sketch.o (__subsf3)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
                               e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o) (__addsf3x)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan2.o)
@@ -48,28 +48,30 @@ e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4
                               e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o) (__mulsf3x)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
                               e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o) (square)
-p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
                               Sketch.o (_ZN14HardwareSerial9availableEv)
-p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
                               Sketch.o (Serial)
-p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
                               E:/IDEs/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o (main)
-p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                              p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o) (_ZN5Print5writeEPKhj)
-p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+                              Sketch.o (_Znwj)
+P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                              P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o) (_ZN5Print5writeEPKhj)
+P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
                               Sketch.o (millis)
-p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
-                              src/Motors.o (pinMode)
-p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                              src/my_libs/ENC_lib.o (pinMode)
+P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
                               Sketch.o (_Z3maplllll)
-p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
-                              p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o) (__cxa_pure_virtual)
-p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
-                              p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o) (yield)
+P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+                              P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o) (__cxa_pure_virtual)
+P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+                              P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o) (yield)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(unordsf2.o)
-                              p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o) (__unordsf2)
+                              P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o) (__unordsf2)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
-                              p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o) (__mulsi3)
+                              P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o) (__mulsi3)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodhi4.o)
                               src/libraries/NewPing/NewPing.o (__udivmodhi4)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodhi4.o)
@@ -83,7 +85,7 @@ e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
                               E:/IDEs/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o (exit)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
-                              src/Motors.o (__tablejump2__)
+                              src/my_libs/ENC_lib.o (__tablejump2__)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_copy_data.o)
                               Sketch.o (__do_copy_data)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_clear_bss.o)
@@ -99,11 +101,11 @@ e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
                               src/libraries/MPU6050/MPU6050.o (malloc)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(random.o)
-                              p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o) (random)
+                              P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o) (random)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(realloc.o)
                               src/libraries/MPU6050/MPU6050.o (realloc)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(abort.o)
-                              p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o) (abort)
+                              P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o) (abort)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(atof.o)
                               Sketch.o (atof)
 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtok.o)
@@ -837,11 +839,14 @@ Discarded input sections
                 0x00000000        0x2 src/MPU6050Calib.o
  .data.buffersize
                 0x00000000        0x2 src/MPU6050Calib.o
- .text          0x00000000        0x0 src/Motors.o
- .data          0x00000000        0x0 src/Motors.o
- .bss           0x00000000        0x0 src/Motors.o
- .bss.Mot1_Dir  0x00000000        0x1 src/Motors.o
- .bss.Mot0_Dir  0x00000000        0x1 src/Motors.o
+ .text          0x00000000        0x0 src/my_libs/ENC_lib.o
+ .data          0x00000000        0x0 src/my_libs/ENC_lib.o
+ .bss           0x00000000        0x0 src/my_libs/ENC_lib.o
+ .bss.Mot1_Dir  0x00000000        0x1 src/my_libs/ENC_lib.o
+ .bss.Mot0_Dir  0x00000000        0x1 src/my_libs/ENC_lib.o
+ .text          0x00000000        0x0 src/my_libs/MOT_lib.o
+ .data          0x00000000        0x0 src/my_libs/MOT_lib.o
+ .bss           0x00000000        0x0 src/my_libs/MOT_lib.o
  .text          0x00000000        0x0 src/my_libs/pwm_basic.o
  .data          0x00000000        0x0 src/my_libs/pwm_basic.o
  .bss           0x00000000        0x0 src/my_libs/pwm_basic.o
@@ -954,125 +959,133 @@ Discarded input sections
  .text          0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
  .data          0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
  .bss           0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
- .group         0x00000000        0x8 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .text          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .data          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .bss           0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .group         0x00000000        0x8 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .text          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .data          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .bss           0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
  .text._ZN14HardwareSerial3endEv
-                0x00000000       0x44 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .group         0x00000000        0x8 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .group         0x00000000        0x8 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .text          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .data          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .bss           0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00000000       0x44 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .group         0x00000000        0x8 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .group         0x00000000        0x8 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .text          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .data          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .bss           0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
  .text._ZN5Print17availableForWriteEv
-                0x00000000        0x6 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00000000        0x6 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
  .text._ZN5Print5flushEv
-                0x00000000        0x2 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .text          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
- .data          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
- .bss           0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
- .text.atexit   0x00000000        0x6 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+                0x00000000        0x2 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .text          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .data          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .bss           0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .text.atexit   0x00000000        0x6 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
  .text._Z8setupUSBv
-                0x00000000        0x2 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
- .group         0x00000000        0x8 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .group         0x00000000        0x8 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .group         0x00000000        0x8 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .group         0x00000000        0x8 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .text          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .data          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .bss           0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000        0x2 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .text          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .data          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .bss           0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .text._Znaj    0x00000000        0x4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .text._ZdlPv   0x00000000        0x4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .text._ZdaPv   0x00000000        0x4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .group         0x00000000        0x8 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .group         0x00000000        0x8 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .group         0x00000000        0x8 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .group         0x00000000        0x8 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .text          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .data          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .bss           0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print17availableForWriteEv
-                0x00000000        0x6 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000        0x6 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print5flushEv
-                0x00000000        0x2 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000        0x2 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print5printEPK19__FlashStringHelper
-                0x00000000       0x48 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x48 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print5printERK6String
-                0x00000000       0x1c p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x1c P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print5printERK9Printable
-                0x00000000       0x14 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x14 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print7printlnEPK19__FlashStringHelper
-                0x00000000       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print7printlnERK6String
-                0x00000000       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print7printlnEc
-                0x00000000       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print7printlnERK9Printable
-                0x00000000       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print5printEhi
-                0x00000000        0xe p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000        0xe P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print7printlnEhi
-                0x00000000       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print7printlnEji
-                0x00000000       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .text._ZN5Print7printlnEmi
+                0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print7printlnEii
-                0x00000000       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print7printlnEli
-                0x00000000       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .text._ZN5Print7printlnEdi
-                0x00000000       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .rodata._ZTV5Print
-                0x00000000        0xc p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .text          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .data          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .bss           0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .text.delay    0x00000000       0x78 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+                0x00000000        0xc P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .text          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .data          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .bss           0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .text.delay    0x00000000       0x78 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
  .text.delayMicroseconds
-                0x00000000       0x16 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .text          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
- .data          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
- .bss           0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000000       0x16 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .text          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .data          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .bss           0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
  .text.turnOffPWM
-                0x00000000       0x52 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000000       0x52 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
  .text.digitalWrite
-                0x00000000       0x5e p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000000       0x5e P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
  .text.digitalRead
-                0x00000000       0x52 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000000       0x52 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
  .progmem.data.digital_pin_to_timer_PGM
-                0x00000000       0x14 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
- .text          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
- .data          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
- .bss           0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+                0x00000000       0x14 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .text          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .data          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .bss           0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
  .text._Z10randomSeedm
-                0x00000000       0x10 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+                0x00000000       0x10 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
  .text._Z6randoml
-                0x00000000       0x34 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+                0x00000000       0x34 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
  .text._Z6randomll
-                0x00000000       0x44 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+                0x00000000       0x44 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
  .text._Z8makeWordj
-                0x00000000        0x2 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+                0x00000000        0x2 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
  .text._Z8makeWordhh
-                0x00000000        0xa p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
- .text          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
- .data          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
- .bss           0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+                0x00000000        0xa P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .text          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+ .data          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+ .bss           0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
  .text.__cxa_pure_virtual
-                0x00000000        0x4 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+                0x00000000        0x4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
  .text.__cxa_deleted_virtual
-                0x00000000        0x4 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
- .debug_info    0x00000000       0x76 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
- .debug_abbrev  0x00000000       0x6d p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+                0x00000000        0x4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+ .debug_info    0x00000000       0x76 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+ .debug_abbrev  0x00000000       0x6d P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
  .debug_aranges
-                0x00000000       0x20 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
- .debug_ranges  0x00000000       0x10 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
- .debug_line    0x00000000       0x99 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
- .debug_str     0x00000000      0x1a9 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
- .comment       0x00000000       0x31 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
- .debug_frame   0x00000000       0x34 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
- .text          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
- .data          0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
- .bss           0x00000000        0x0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
- .text.__empty  0x00000000        0x2 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
- .debug_info    0x00000000       0x3e p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
- .debug_abbrev  0x00000000       0x2a p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+                0x00000000       0x20 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+ .debug_ranges  0x00000000       0x10 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+ .debug_line    0x00000000       0x99 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+ .debug_str     0x00000000      0x1a9 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+ .comment       0x00000000       0x31 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+ .debug_frame   0x00000000       0x34 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(abi.o)
+ .text          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+ .data          0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+ .bss           0x00000000        0x0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+ .text.__empty  0x00000000        0x2 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+ .debug_info    0x00000000       0x3e P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+ .debug_abbrev  0x00000000       0x2a P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
  .debug_aranges
-                0x00000000       0x20 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
- .debug_ranges  0x00000000       0x10 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
- .debug_line    0x00000000       0x41 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
- .debug_str     0x00000000      0x14a p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
- .comment       0x00000000       0x31 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
- .debug_frame   0x00000000       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+                0x00000000       0x20 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+ .debug_ranges  0x00000000       0x10 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+ .debug_line    0x00000000       0x41 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+ .debug_str     0x00000000      0x14a P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+ .comment       0x00000000       0x31 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
+ .debug_frame   0x00000000       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(hooks.o)
  .text          0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(unordsf2.o)
  .data          0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(unordsf2.o)
  .bss           0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(unordsf2.o)
@@ -1288,12 +1301,7 @@ Discarded input sections
  .text.libgcc.fixed
                 0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
  .text          0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
- .data          0x00000000        0x6 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
  .bss           0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
- .text.avr-libc
-                0x00000000      0x242 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
- .comment       0x00000000       0x31 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
- COMMON         0x00000000        0x4 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
  .text          0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(random.o)
  .data          0x00000000        0x4 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(random.o)
  .bss           0x00000000        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(random.o)
@@ -1419,12 +1427,13 @@ LOAD src/libraries/NewPing/NewPing.o
 LOAD src/libraries/Wire/src/utility/twi.o
 LOAD src/libraries/Wire/src/Wire.o
 LOAD src/MPU6050Calib.o
-LOAD src/Motors.o
+LOAD src/my_libs/ENC_lib.o
+LOAD src/my_libs/MOT_lib.o
 LOAD src/my_libs/pwm_basic.o
 LOAD src/my_libs/pwm_basic_example.o
 START GROUP
 LOAD e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
-LOAD p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a
+LOAD P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a
 END GROUP
 LOAD e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a
 LOAD e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a
@@ -1532,7 +1541,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3ddc
+.text           0x00000000     0x41bc
  *(.vectors)
  .vectors       0x00000000       0x68 E:/IDEs/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
                 0x00000000                __vector_default
@@ -1540,9 +1549,9 @@ END GROUP
  *(.vectors)
  *(.progmem.gcc*)
  .progmem.gcc_sw_table.__vector_3
-                0x00000068       0x1c src/Motors.o
+                0x00000068       0x1c src/my_libs/ENC_lib.o
  .progmem.gcc_sw_table.__vector_4
-                0x00000084       0x1c src/Motors.o
+                0x00000084       0x1c src/my_libs/ENC_lib.o
  .progmem.gcc_fplib
                 0x000000a0       0x2d e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o)
                 0x000000ce                . = ALIGN (0x2)
@@ -1557,19 +1566,19 @@ END GROUP
  .progmem.data  0x000000ce       0x3b e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtod.o)
  *(.progmem*)
  .progmem.data.digital_pin_to_bit_mask_PGM
-                0x00000109       0x14 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000109       0x14 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
                 0x00000109                digital_pin_to_bit_mask_PGM
  .progmem.data.digital_pin_to_port_PGM
-                0x0000011d       0x14 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x0000011d       0x14 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
                 0x0000011d                digital_pin_to_port_PGM
  .progmem.data.port_to_input_PGM
-                0x00000131        0xa p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000131        0xa P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
                 0x00000131                port_to_input_PGM
  .progmem.data.port_to_output_PGM
-                0x0000013b        0xa p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x0000013b        0xa P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
                 0x0000013b                port_to_output_PGM
  .progmem.data.port_to_mode_PGM
-                0x00000145        0xa p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000145        0xa P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
                 0x00000145                port_to_mode_PGM
                 0x00000150                . = ALIGN (0x2)
  *fill*         0x0000014f        0x1 
@@ -1582,7 +1591,7 @@ END GROUP
  .ctors         0x00000150        0x2 Sketch.o
  .ctors         0x00000152        0x2 src/libraries/Wire/src/Wire.o
  .ctors         0x00000154        0x2 src/MPU6050Calib.o
- .ctors         0x00000156        0x2 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .ctors         0x00000156        0x2 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
                 0x00000158                __ctors_end = .
                 0x00000158                __dtors_start = .
  *(.dtors)
@@ -1642,537 +1651,543 @@ END GROUP
                 0x000001a8                __vector_20
                 0x000001ac                . = ALIGN (0x2)
  *(.text.*)
+ .text._Z15initPidControlsv
+                0x000001ac      0x2da Sketch.o
+                0x000001ac                _Z15initPidControlsv
  .text._Z11PrintPidCfgP11PIDConfig_e
-                0x000001ac       0xac Sketch.o
-                0x000001ac                _Z11PrintPidCfgP11PIDConfig_e
+                0x00000486       0xac Sketch.o
+                0x00000486                _Z11PrintPidCfgP11PIDConfig_e
  .text._Z18PrintEncoderValuesv
-                0x00000258       0x68 Sketch.o
-                0x00000258                _Z18PrintEncoderValuesv
+                0x00000532       0x68 Sketch.o
+                0x00000532                _Z18PrintEncoderValuesv
  .text._Z20PrintPidOutputValuesv
-                0x000002c0       0xb4 Sketch.o
-                0x000002c0                _Z20PrintPidOutputValuesv
+                0x0000059a       0xb8 Sketch.o
+                0x0000059a                _Z20PrintPidOutputValuesv
  .text._Z13Ser_ParseDatav
-                0x00000374      0x340 Sketch.o
-                0x00000374                _Z13Ser_ParseDatav
+                0x00000652      0x3ce Sketch.o
+                0x00000652                _Z13Ser_ParseDatav
  .text._Z19UpdateEncoderValuesv
-                0x000006b4       0x72 Sketch.o
-                0x000006b4                _Z19UpdateEncoderValuesv
+                0x00000a20       0x72 Sketch.o
+                0x00000a20                _Z19UpdateEncoderValuesv
  .text._Z13Giro_ReadDatav
-                0x00000726      0x250 Sketch.o
-                0x00000726                _Z13Giro_ReadDatav
+                0x00000a92      0x250 Sketch.o
+                0x00000a92                _Z13Giro_ReadDatav
  .text._Z16PrintGiroRawDatav
-                0x00000976       0x6c Sketch.o
-                0x00000976                _Z16PrintGiroRawDatav
+                0x00000ce2       0x6c Sketch.o
+                0x00000ce2                _Z16PrintGiroRawDatav
  .text._Z26PrintGiroInputOutputValuesv
-                0x000009e2       0x58 Sketch.o
-                0x000009e2                _Z26PrintGiroInputOutputValuesv
- .text.setup    0x00000a3a      0x172 Sketch.o
-                0x00000a3a                setup
+                0x00000d4e       0x5c Sketch.o
+                0x00000d4e                _Z26PrintGiroInputOutputValuesv
+ .text.setup    0x00000daa       0xea Sketch.o
+                0x00000daa                setup
  .text.startup._GLOBAL__sub_I_sonar
-                0x00000bac      0x1c2 Sketch.o
+                0x00000e94       0x18 Sketch.o
  .text._Z15Ser_ReceiveDatav
-                0x00000d6e       0x62 Sketch.o
-                0x00000d6e                _Z15Ser_ReceiveDatav
- .text.loop     0x00000dd0      0x2ec Sketch.o
-                0x00000dd0                loop
+                0x00000eac       0x62 Sketch.o
+                0x00000eac                _Z15Ser_ReceiveDatav
+ .text.loop     0x00000f0e      0x36c Sketch.o
+                0x00000f0e                loop
  .text._ZN3PID7ComputeEv
-                0x000010bc      0x2ce src/libraries/Arduino-PID-Library-master/PID_v1.o
-                0x000010bc                _ZN3PID7ComputeEv
+                0x0000127a      0x2ce src/libraries/Arduino-PID-Library-master/PID_v1.o
+                0x0000127a                _ZN3PID7ComputeEv
  .text._ZN3PID10SetTuningsEdddi
-                0x0000138a      0x1ac src/libraries/Arduino-PID-Library-master/PID_v1.o
-                0x0000138a                _ZN3PID10SetTuningsEdddi
+                0x00001548      0x1ac src/libraries/Arduino-PID-Library-master/PID_v1.o
+                0x00001548                _ZN3PID10SetTuningsEdddi
  .text._ZN3PID10SetTuningsEddd
-                0x00001536       0x2c src/libraries/Arduino-PID-Library-master/PID_v1.o
-                0x00001536                _ZN3PID10SetTuningsEddd
+                0x000016f4       0x2c src/libraries/Arduino-PID-Library-master/PID_v1.o
+                0x000016f4                _ZN3PID10SetTuningsEddd
  .text._ZN3PID13SetSampleTimeEi
-                0x00001562       0x9c src/libraries/Arduino-PID-Library-master/PID_v1.o
-                0x00001562                _ZN3PID13SetSampleTimeEi
+                0x00001720       0x9c src/libraries/Arduino-PID-Library-master/PID_v1.o
+                0x00001720                _ZN3PID13SetSampleTimeEi
  .text._ZN3PID15SetOutputLimitsEdd
-                0x000015fe      0x100 src/libraries/Arduino-PID-Library-master/PID_v1.o
-                0x000015fe                _ZN3PID15SetOutputLimitsEdd
+                0x000017bc      0x100 src/libraries/Arduino-PID-Library-master/PID_v1.o
+                0x000017bc                _ZN3PID15SetOutputLimitsEdd
  .text._ZN3PID10InitializeEv
-                0x000016fe       0x8c src/libraries/Arduino-PID-Library-master/PID_v1.o
-                0x000016fe                _ZN3PID10InitializeEv
+                0x000018bc       0x8c src/libraries/Arduino-PID-Library-master/PID_v1.o
+                0x000018bc                _ZN3PID10InitializeEv
  .text._ZN3PID7SetModeEi
-                0x0000178a       0x2e src/libraries/Arduino-PID-Library-master/PID_v1.o
-                0x0000178a                _ZN3PID7SetModeEi
+                0x00001948       0x2e src/libraries/Arduino-PID-Library-master/PID_v1.o
+                0x00001948                _ZN3PID7SetModeEi
  .text._ZN3PID22SetControllerDirectionEi
-                0x000017b8       0x78 src/libraries/Arduino-PID-Library-master/PID_v1.o
-                0x000017b8                _ZN3PID22SetControllerDirectionEi
+                0x00001976       0x78 src/libraries/Arduino-PID-Library-master/PID_v1.o
+                0x00001976                _ZN3PID22SetControllerDirectionEi
  .text._ZN3PIDC2EPdS0_S0_dddii
-                0x00001830       0xe2 src/libraries/Arduino-PID-Library-master/PID_v1.o
-                0x00001830                _ZN3PIDC2EPdS0_S0_dddii
-                0x00001830                _ZN3PIDC1EPdS0_S0_dddii
+                0x000019ee       0xe2 src/libraries/Arduino-PID-Library-master/PID_v1.o
+                0x000019ee                _ZN3PIDC2EPdS0_S0_dddii
+                0x000019ee                _ZN3PIDC1EPdS0_S0_dddii
  .text._ZN6I2Cdev10writeBytesEhhhPh
-                0x00001912       0x60 src/libraries/I2Cdev/I2Cdev.o
-                0x00001912                _ZN6I2Cdev10writeBytesEhhhPh
+                0x00001ad0       0x60 src/libraries/I2Cdev/I2Cdev.o
+                0x00001ad0                _ZN6I2Cdev10writeBytesEhhhPh
  .text._ZN6I2Cdev9writeByteEhhh
-                0x00001972       0x20 src/libraries/I2Cdev/I2Cdev.o
-                0x00001972                _ZN6I2Cdev9writeByteEhhh
+                0x00001b30       0x20 src/libraries/I2Cdev/I2Cdev.o
+                0x00001b30                _ZN6I2Cdev9writeByteEhhh
  .text._ZN6I2Cdev10writeWordsEhhhPj
-                0x00001992       0x7c src/libraries/I2Cdev/I2Cdev.o
-                0x00001992                _ZN6I2Cdev10writeWordsEhhhPj
+                0x00001b50       0x7c src/libraries/I2Cdev/I2Cdev.o
+                0x00001b50                _ZN6I2Cdev10writeWordsEhhhPj
  .text._ZN6I2Cdev9writeWordEhhj
-                0x00001a0e       0x24 src/libraries/I2Cdev/I2Cdev.o
-                0x00001a0e                _ZN6I2Cdev9writeWordEhhj
+                0x00001bcc       0x24 src/libraries/I2Cdev/I2Cdev.o
+                0x00001bcc                _ZN6I2Cdev9writeWordEhhj
  .text._ZN6I2Cdev9readBytesEhhhPhj
-                0x00001a32      0x16a src/libraries/I2Cdev/I2Cdev.o
-                0x00001a32                _ZN6I2Cdev9readBytesEhhhPhj
+                0x00001bf0      0x16a src/libraries/I2Cdev/I2Cdev.o
+                0x00001bf0                _ZN6I2Cdev9readBytesEhhhPhj
  .text._ZN6I2Cdev8readByteEhhPhj
-                0x00001b9c       0x14 src/libraries/I2Cdev/I2Cdev.o
-                0x00001b9c                _ZN6I2Cdev8readByteEhhPhj
+                0x00001d5a       0x14 src/libraries/I2Cdev/I2Cdev.o
+                0x00001d5a                _ZN6I2Cdev8readByteEhhPhj
  .text._ZN6I2Cdev8writeBitEhhhh
-                0x00001bb0       0x60 src/libraries/I2Cdev/I2Cdev.o
-                0x00001bb0                _ZN6I2Cdev8writeBitEhhhh
+                0x00001d6e       0x60 src/libraries/I2Cdev/I2Cdev.o
+                0x00001d6e                _ZN6I2Cdev8writeBitEhhhh
  .text._ZN6I2Cdev9writeBitsEhhhhh
-                0x00001c10       0x94 src/libraries/I2Cdev/I2Cdev.o
-                0x00001c10                _ZN6I2Cdev9writeBitsEhhhhh
+                0x00001dce       0x94 src/libraries/I2Cdev/I2Cdev.o
+                0x00001dce                _ZN6I2Cdev9writeBitsEhhhhh
  .text._ZN7MPU6050C2Ev
-                0x00001ca4        0x8 src/libraries/MPU6050/MPU6050.o
-                0x00001ca4                _ZN7MPU6050C2Ev
-                0x00001ca4                _ZN7MPU6050C1Ev
+                0x00001e62        0x8 src/libraries/MPU6050/MPU6050.o
+                0x00001e62                _ZN7MPU6050C2Ev
+                0x00001e62                _ZN7MPU6050C1Ev
  .text._ZN7MPU6050C2Eh
-                0x00001cac        0x6 src/libraries/MPU6050/MPU6050.o
-                0x00001cac                _ZN7MPU6050C1Eh
-                0x00001cac                _ZN7MPU6050C2Eh
+                0x00001e6a        0x6 src/libraries/MPU6050/MPU6050.o
+                0x00001e6a                _ZN7MPU6050C1Eh
+                0x00001e6a                _ZN7MPU6050C2Eh
  .text._ZN7MPU605021setFullScaleGyroRangeEh
-                0x00001cb2       0x16 src/libraries/MPU6050/MPU6050.o
-                0x00001cb2                _ZN7MPU605021setFullScaleGyroRangeEh
+                0x00001e70       0x16 src/libraries/MPU6050/MPU6050.o
+                0x00001e70                _ZN7MPU605021setFullScaleGyroRangeEh
  .text._ZN7MPU605022setFullScaleAccelRangeEh
-                0x00001cc8       0x16 src/libraries/MPU6050/MPU6050.o
-                0x00001cc8                _ZN7MPU605022setFullScaleAccelRangeEh
+                0x00001e86       0x16 src/libraries/MPU6050/MPU6050.o
+                0x00001e86                _ZN7MPU605022setFullScaleAccelRangeEh
  .text._ZN7MPU605016getAccelerationYEv
-                0x00001cde       0x36 src/libraries/MPU6050/MPU6050.o
-                0x00001cde                _ZN7MPU605016getAccelerationYEv
+                0x00001e9c       0x36 src/libraries/MPU6050/MPU6050.o
+                0x00001e9c                _ZN7MPU605016getAccelerationYEv
  .text._ZN7MPU605016getAccelerationZEv
-                0x00001d14       0x36 src/libraries/MPU6050/MPU6050.o
-                0x00001d14                _ZN7MPU605016getAccelerationZEv
+                0x00001ed2       0x36 src/libraries/MPU6050/MPU6050.o
+                0x00001ed2                _ZN7MPU605016getAccelerationZEv
  .text._ZN7MPU605012getRotationXEv
-                0x00001d4a       0x36 src/libraries/MPU6050/MPU6050.o
-                0x00001d4a                _ZN7MPU605012getRotationXEv
+                0x00001f08       0x36 src/libraries/MPU6050/MPU6050.o
+                0x00001f08                _ZN7MPU605012getRotationXEv
  .text._ZN7MPU605015setSleepEnabledEb
-                0x00001d80        0xe src/libraries/MPU6050/MPU6050.o
-                0x00001d80                _ZN7MPU605015setSleepEnabledEb
+                0x00001f3e        0xe src/libraries/MPU6050/MPU6050.o
+                0x00001f3e                _ZN7MPU605015setSleepEnabledEb
  .text._ZN7MPU605014setClockSourceEh
-                0x00001d8e       0x16 src/libraries/MPU6050/MPU6050.o
-                0x00001d8e                _ZN7MPU605014setClockSourceEh
+                0x00001f4c       0x16 src/libraries/MPU6050/MPU6050.o
+                0x00001f4c                _ZN7MPU605014setClockSourceEh
  .text._ZN7MPU605010initializeEv
-                0x00001da4       0x28 src/libraries/MPU6050/MPU6050.o
-                0x00001da4                _ZN7MPU605010initializeEv
+                0x00001f62       0x28 src/libraries/MPU6050/MPU6050.o
+                0x00001f62                _ZN7MPU605010initializeEv
  .text._ZN7MPU605015setXAccelOffsetEi
-                0x00001dcc        0xc src/libraries/MPU6050/MPU6050.o
-                0x00001dcc                _ZN7MPU605015setXAccelOffsetEi
+                0x00001f8a        0xc src/libraries/MPU6050/MPU6050.o
+                0x00001f8a                _ZN7MPU605015setXAccelOffsetEi
  .text._ZN7MPU605015setYAccelOffsetEi
-                0x00001dd8        0xc src/libraries/MPU6050/MPU6050.o
-                0x00001dd8                _ZN7MPU605015setYAccelOffsetEi
+                0x00001f96        0xc src/libraries/MPU6050/MPU6050.o
+                0x00001f96                _ZN7MPU605015setYAccelOffsetEi
  .text._ZN7MPU605015setZAccelOffsetEi
-                0x00001de4        0xc src/libraries/MPU6050/MPU6050.o
-                0x00001de4                _ZN7MPU605015setZAccelOffsetEi
+                0x00001fa2        0xc src/libraries/MPU6050/MPU6050.o
+                0x00001fa2                _ZN7MPU605015setZAccelOffsetEi
  .text._ZN7MPU605014setXGyroOffsetEi
-                0x00001df0        0xc src/libraries/MPU6050/MPU6050.o
-                0x00001df0                _ZN7MPU605014setXGyroOffsetEi
+                0x00001fae        0xc src/libraries/MPU6050/MPU6050.o
+                0x00001fae                _ZN7MPU605014setXGyroOffsetEi
  .text._ZN7MPU605014setYGyroOffsetEi
-                0x00001dfc        0xc src/libraries/MPU6050/MPU6050.o
-                0x00001dfc                _ZN7MPU605014setYGyroOffsetEi
+                0x00001fba        0xc src/libraries/MPU6050/MPU6050.o
+                0x00001fba                _ZN7MPU605014setYGyroOffsetEi
  .text._ZN7MPU605014setZGyroOffsetEi
-                0x00001e08        0xc src/libraries/MPU6050/MPU6050.o
-                0x00001e08                _ZN7MPU605014setZGyroOffsetEi
+                0x00001fc6        0xc src/libraries/MPU6050/MPU6050.o
+                0x00001fc6                _ZN7MPU605014setZGyroOffsetEi
  .text._ZN7NewPing16set_max_distanceEj
-                0x00001e14       0x24 src/libraries/NewPing/NewPing.o
-                0x00001e14                _ZN7NewPing16set_max_distanceEj
+                0x00001fd2       0x24 src/libraries/NewPing/NewPing.o
+                0x00001fd2                _ZN7NewPing16set_max_distanceEj
  .text._ZN7NewPingC2Ehhj
-                0x00001e38       0x84 src/libraries/NewPing/NewPing.o
-                0x00001e38                _ZN7NewPingC1Ehhj
-                0x00001e38                _ZN7NewPingC2Ehhj
+                0x00001ff6       0x84 src/libraries/NewPing/NewPing.o
+                0x00001ff6                _ZN7NewPingC1Ehhj
+                0x00001ff6                _ZN7NewPingC2Ehhj
  .text.__vector_7
-                0x00001ebc       0x4e src/libraries/NewPing/NewPing.o
-                0x00001ebc                __vector_7
+                0x0000207a       0x4e src/libraries/NewPing/NewPing.o
+                0x0000207a                __vector_7
  .text.twi_readFrom
-                0x00001f0a       0x90 src/libraries/Wire/src/utility/twi.o
-                0x00001f0a                twi_readFrom
+                0x000020c8       0x90 src/libraries/Wire/src/utility/twi.o
+                0x000020c8                twi_readFrom
  .text.twi_writeTo
-                0x00001f9a       0xac src/libraries/Wire/src/utility/twi.o
-                0x00001f9a                twi_writeTo
+                0x00002158       0xac src/libraries/Wire/src/utility/twi.o
+                0x00002158                twi_writeTo
  .text.twi_transmit
-                0x00002046       0x50 src/libraries/Wire/src/utility/twi.o
-                0x00002046                twi_transmit
+                0x00002204       0x50 src/libraries/Wire/src/utility/twi.o
+                0x00002204                twi_transmit
  .text.twi_stop
-                0x00002096       0x14 src/libraries/Wire/src/utility/twi.o
-                0x00002096                twi_stop
+                0x00002254       0x14 src/libraries/Wire/src/utility/twi.o
+                0x00002254                twi_stop
  .text.twi_releaseBus
-                0x000020aa        0xc src/libraries/Wire/src/utility/twi.o
-                0x000020aa                twi_releaseBus
+                0x00002268        0xc src/libraries/Wire/src/utility/twi.o
+                0x00002268                twi_releaseBus
  .text.__vector_24
-                0x000020b6      0x25a src/libraries/Wire/src/utility/twi.o
-                0x000020b6                __vector_24
+                0x00002274      0x25a src/libraries/Wire/src/utility/twi.o
+                0x00002274                __vector_24
  .text._ZN5Print17availableForWriteEv
-                0x00002310        0x6 src/libraries/Wire/src/Wire.o
-                0x00002310                _ZN5Print17availableForWriteEv
+                0x000024ce        0x6 src/libraries/Wire/src/Wire.o
+                0x000024ce                _ZN5Print17availableForWriteEv
  .text._ZN7TwoWire9availableEv
-                0x00002316       0x10 src/libraries/Wire/src/Wire.o
-                0x00002316                _ZN7TwoWire9availableEv
+                0x000024d4       0x10 src/libraries/Wire/src/Wire.o
+                0x000024d4                _ZN7TwoWire9availableEv
  .text._ZN7TwoWire4readEv
-                0x00002326       0x28 src/libraries/Wire/src/Wire.o
-                0x00002326                _ZN7TwoWire4readEv
+                0x000024e4       0x28 src/libraries/Wire/src/Wire.o
+                0x000024e4                _ZN7TwoWire4readEv
  .text._ZN7TwoWire4peekEv
-                0x0000234e       0x1e src/libraries/Wire/src/Wire.o
-                0x0000234e                _ZN7TwoWire4peekEv
+                0x0000250c       0x1e src/libraries/Wire/src/Wire.o
+                0x0000250c                _ZN7TwoWire4peekEv
  .text._ZN7TwoWire5flushEv
-                0x0000236c        0x2 src/libraries/Wire/src/Wire.o
-                0x0000236c                _ZN7TwoWire5flushEv
+                0x0000252a        0x2 src/libraries/Wire/src/Wire.o
+                0x0000252a                _ZN7TwoWire5flushEv
  .text._ZN7TwoWire5writeEPKhj
-                0x0000236e       0x5a src/libraries/Wire/src/Wire.o
-                0x0000236e                _ZN7TwoWire5writeEPKhj
+                0x0000252c       0x5a src/libraries/Wire/src/Wire.o
+                0x0000252c                _ZN7TwoWire5writeEPKhj
  .text._ZN7TwoWire5writeEh
-                0x000023c8       0x5e src/libraries/Wire/src/Wire.o
-                0x000023c8                _ZN7TwoWire5writeEh
+                0x00002586       0x5e src/libraries/Wire/src/Wire.o
+                0x00002586                _ZN7TwoWire5writeEh
  .text._ZN7TwoWireC2Ev
-                0x00002426       0x20 src/libraries/Wire/src/Wire.o
-                0x00002426                _ZN7TwoWireC1Ev
-                0x00002426                _ZN7TwoWireC2Ev
+                0x000025e4       0x20 src/libraries/Wire/src/Wire.o
+                0x000025e4                _ZN7TwoWireC1Ev
+                0x000025e4                _ZN7TwoWireC2Ev
  .text._ZN7TwoWire17beginTransmissionEh
-                0x00002446       0x14 src/libraries/Wire/src/Wire.o
-                0x00002446                _ZN7TwoWire17beginTransmissionEh
+                0x00002604       0x14 src/libraries/Wire/src/Wire.o
+                0x00002604                _ZN7TwoWire17beginTransmissionEh
  .text._ZN7TwoWire15endTransmissionEh
-                0x0000245a       0x26 src/libraries/Wire/src/Wire.o
-                0x0000245a                _ZN7TwoWire15endTransmissionEh
+                0x00002618       0x26 src/libraries/Wire/src/Wire.o
+                0x00002618                _ZN7TwoWire15endTransmissionEh
  .text._ZN7TwoWire11requestFromEhhmhh
-                0x00002480       0xa8 src/libraries/Wire/src/Wire.o
-                0x00002480                _ZN7TwoWire11requestFromEhhmhh
+                0x0000263e       0xa8 src/libraries/Wire/src/Wire.o
+                0x0000263e                _ZN7TwoWire11requestFromEhhmhh
  .text._ZN7TwoWire11requestFromEhhh
-                0x00002528       0x20 src/libraries/Wire/src/Wire.o
-                0x00002528                _ZN7TwoWire11requestFromEhhh
+                0x000026e6       0x20 src/libraries/Wire/src/Wire.o
+                0x000026e6                _ZN7TwoWire11requestFromEhhh
  .text._ZN7TwoWire11requestFromEhh
-                0x00002548        0x6 src/libraries/Wire/src/Wire.o
-                0x00002548                _ZN7TwoWire11requestFromEhh
+                0x00002706        0x6 src/libraries/Wire/src/Wire.o
+                0x00002706                _ZN7TwoWire11requestFromEhh
  .text._ZN7TwoWire15endTransmissionEv
-                0x0000254e        0x6 src/libraries/Wire/src/Wire.o
-                0x0000254e                _ZN7TwoWire15endTransmissionEv
+                0x0000270c        0x6 src/libraries/Wire/src/Wire.o
+                0x0000270c                _ZN7TwoWire15endTransmissionEv
  .text.startup._GLOBAL__sub_I__ZN7TwoWire8rxBufferE
-                0x00002554        0x8 src/libraries/Wire/src/Wire.o
+                0x00002712        0x8 src/libraries/Wire/src/Wire.o
  .text.startup._GLOBAL__sub_I_buffersize
-                0x0000255c        0xa src/MPU6050Calib.o
- .text._Z15Motor0_SetSpeedhh.part.0
-                0x00002566       0x1a src/Motors.o
- .text._Z15Motor1_SetSpeedhh.part.1
-                0x00002580       0x1a src/Motors.o
- .text._Z11Motor0_Stopv
-                0x0000259a        0xe src/Motors.o
-                0x0000259a                _Z11Motor0_Stopv
- .text._Z9Mot0_Initv
-                0x000025a8       0x18 src/Motors.o
-                0x000025a8                _Z9Mot0_Initv
- .text._Z11Motor1_Stopv
-                0x000025c0        0xe src/Motors.o
-                0x000025c0                _Z11Motor1_Stopv
- .text._Z9Mot1_Initv
-                0x000025ce       0x18 src/Motors.o
-                0x000025ce                _Z9Mot1_Initv
- .text._Z15Motor0_SetSpeedhh
-                0x000025e6       0x2c src/Motors.o
-                0x000025e6                _Z15Motor0_SetSpeedhh
- .text._Z15Motor1_SetSpeedhh
-                0x00002612       0x2c src/Motors.o
-                0x00002612                _Z15Motor1_SetSpeedhh
- .text._Z15Motors_SetSpeedii
-                0x0000263e       0x3e src/Motors.o
-                0x0000263e                _Z15Motors_SetSpeedii
+                0x0000271a        0xa src/MPU6050Calib.o
  .text._Z8Enc_Initv
-                0x0000267c       0x44 src/Motors.o
-                0x0000267c                _Z8Enc_Initv
+                0x00002724       0x44 src/my_libs/ENC_lib.o
+                0x00002724                _Z8Enc_Initv
  .text.__vector_3
-                0x000026c0       0xfa src/Motors.o
-                0x000026c0                __vector_3
+                0x00002768       0xfa src/my_libs/ENC_lib.o
+                0x00002768                __vector_3
  .text.__vector_4
-                0x000027ba       0xf6 src/Motors.o
-                0x000027ba                __vector_4
+                0x00002862       0xf6 src/my_libs/ENC_lib.o
+                0x00002862                __vector_4
+ .text._Z15Motor0_SetSpeedhh.part.0
+                0x00002958       0x1a src/my_libs/MOT_lib.o
+ .text._Z15Motor1_SetSpeedhh.part.1
+                0x00002972       0x1a src/my_libs/MOT_lib.o
+ .text._Z11Motor0_Stopv
+                0x0000298c        0xe src/my_libs/MOT_lib.o
+                0x0000298c                _Z11Motor0_Stopv
+ .text._Z9Mot0_Initv
+                0x0000299a       0x18 src/my_libs/MOT_lib.o
+                0x0000299a                _Z9Mot0_Initv
+ .text._Z11Motor1_Stopv
+                0x000029b2        0xe src/my_libs/MOT_lib.o
+                0x000029b2                _Z11Motor1_Stopv
+ .text._Z9Mot1_Initv
+                0x000029c0       0x18 src/my_libs/MOT_lib.o
+                0x000029c0                _Z9Mot1_Initv
+ .text._Z15Motor0_SetSpeedhh
+                0x000029d8       0x2c src/my_libs/MOT_lib.o
+                0x000029d8                _Z15Motor0_SetSpeedhh
+ .text._Z15Motor1_SetSpeedhh
+                0x00002a04       0x2c src/my_libs/MOT_lib.o
+                0x00002a04                _Z15Motor1_SetSpeedhh
+ .text._Z15Motors_SetSpeedii
+                0x00002a30       0x3e src/my_libs/MOT_lib.o
+                0x00002a30                _Z15Motors_SetSpeedii
  .text.PWM_0_init
-                0x000028b0       0x20 src/my_libs/pwm_basic.o
-                0x000028b0                PWM_0_init
+                0x00002a6e       0x20 src/my_libs/pwm_basic.o
+                0x00002a6e                PWM_0_init
  .text.PWM_0_enable_output_ch0
-                0x000028d0        0x8 src/my_libs/pwm_basic.o
-                0x000028d0                PWM_0_enable_output_ch0
+                0x00002a8e        0x8 src/my_libs/pwm_basic.o
+                0x00002a8e                PWM_0_enable_output_ch0
  .text.PWM_0_disable_output_ch0
-                0x000028d8        0x8 src/my_libs/pwm_basic.o
-                0x000028d8                PWM_0_disable_output_ch0
+                0x00002a96        0x8 src/my_libs/pwm_basic.o
+                0x00002a96                PWM_0_disable_output_ch0
  .text.PWM_0_enable_output_ch1
-                0x000028e0        0x8 src/my_libs/pwm_basic.o
-                0x000028e0                PWM_0_enable_output_ch1
+                0x00002a9e        0x8 src/my_libs/pwm_basic.o
+                0x00002a9e                PWM_0_enable_output_ch1
  .text.PWM_0_disable_output_ch1
-                0x000028e8        0x8 src/my_libs/pwm_basic.o
-                0x000028e8                PWM_0_disable_output_ch1
+                0x00002aa6        0x8 src/my_libs/pwm_basic.o
+                0x00002aa6                PWM_0_disable_output_ch1
  .text.PWM_0_load_duty_cycle_ch0
-                0x000028f0        0x4 src/my_libs/pwm_basic.o
-                0x000028f0                PWM_0_load_duty_cycle_ch0
+                0x00002aae        0x4 src/my_libs/pwm_basic.o
+                0x00002aae                PWM_0_load_duty_cycle_ch0
  .text.PWM_0_load_duty_cycle_ch1
-                0x000028f4        0x4 src/my_libs/pwm_basic.o
-                0x000028f4                PWM_0_load_duty_cycle_ch1
+                0x00002ab2        0x4 src/my_libs/pwm_basic.o
+                0x00002ab2                PWM_0_load_duty_cycle_ch1
  .text.PWM_1_init
-                0x000028f8       0x26 src/my_libs/pwm_basic.o
-                0x000028f8                PWM_1_init
+                0x00002ab6       0x26 src/my_libs/pwm_basic.o
+                0x00002ab6                PWM_1_init
  .text.PWM_1_enable_output_ch0
-                0x0000291e        0xc src/my_libs/pwm_basic.o
-                0x0000291e                PWM_1_enable_output_ch0
+                0x00002adc        0xc src/my_libs/pwm_basic.o
+                0x00002adc                PWM_1_enable_output_ch0
  .text.PWM_1_disable_output_ch0
-                0x0000292a        0xc src/my_libs/pwm_basic.o
-                0x0000292a                PWM_1_disable_output_ch0
+                0x00002ae8        0xc src/my_libs/pwm_basic.o
+                0x00002ae8                PWM_1_disable_output_ch0
  .text.PWM_1_enable_output_ch1
-                0x00002936        0xc src/my_libs/pwm_basic.o
-                0x00002936                PWM_1_enable_output_ch1
+                0x00002af4        0xc src/my_libs/pwm_basic.o
+                0x00002af4                PWM_1_enable_output_ch1
  .text.PWM_1_disable_output_ch1
-                0x00002942        0xc src/my_libs/pwm_basic.o
-                0x00002942                PWM_1_disable_output_ch1
+                0x00002b00        0xc src/my_libs/pwm_basic.o
+                0x00002b00                PWM_1_disable_output_ch1
  .text.PWM_1_load_duty_cycle_ch0
-                0x0000294e        0x6 src/my_libs/pwm_basic.o
-                0x0000294e                PWM_1_load_duty_cycle_ch0
+                0x00002b0c        0x6 src/my_libs/pwm_basic.o
+                0x00002b0c                PWM_1_load_duty_cycle_ch0
  .text.PWM_1_load_duty_cycle_ch1
-                0x00002954        0x6 src/my_libs/pwm_basic.o
-                0x00002954                PWM_1_load_duty_cycle_ch1
+                0x00002b12        0x6 src/my_libs/pwm_basic.o
+                0x00002b12                PWM_1_load_duty_cycle_ch1
  .text.avr-libc.fplib
-                0x0000295a        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
-                0x0000295a                __subsf3
-                0x0000295c                __addsf3
+                0x00002b18        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3.o)
+                0x00002b18                __subsf3
+                0x00002b1a                __addsf3
  .text.avr-libc.fplib
-                0x00002968       0xcc e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
-                0x0000298a                __addsf3x
+                0x00002b26       0xcc e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(addsf3x.o)
+                0x00002b48                __addsf3x
  .text.avr-libc.fplib
-                0x00002a34       0x86 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan2.o)
-                0x00002a5a                atan2
+                0x00002bf2       0x86 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan2.o)
+                0x00002c18                atan2
  .text.avr-libc.fplib
-                0x00002aba       0x5e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o)
-                0x00002aba                atan
+                0x00002c78       0x5e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(atan.o)
+                0x00002c78                atan
  .text.avr-libc.fplib
-                0x00002b18        0xa e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
-                0x00002b18                __nesf2
-                0x00002b18                __eqsf2
-                0x00002b18                __cmpsf2
-                0x00002b18                __ltsf2
-                0x00002b18                __lesf2
+                0x00002cd6        0xa e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(cmpsf2.o)
+                0x00002cd6                __nesf2
+                0x00002cd6                __eqsf2
+                0x00002cd6                __cmpsf2
+                0x00002cd6                __ltsf2
+                0x00002cd6                __lesf2
  .text.avr-libc.fplib
-                0x00002b22        0x8 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
-                0x00002b22                __divsf3
+                0x00002ce0        0x8 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3.o)
+                0x00002ce0                __divsf3
  .text.avr-libc.fplib
-                0x00002b2a       0xdc e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
-                0x00002b4a                __divsf3x
-                0x00002b50                __divsf3_pse
+                0x00002ce8       0xdc e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(divsf3x.o)
+                0x00002d08                __divsf3x
+                0x00002d0e                __divsf3_pse
  .text.avr-libc.fplib
-                0x00002c06        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
-                0x00002c06                __fixsfsi
+                0x00002dc4        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixsfsi.o)
+                0x00002dc4                __fixsfsi
  .text.avr-libc.fplib
-                0x00002c14       0x5e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
-                0x00002c14                __fixunssfsi
+                0x00002dd2       0x5e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fixunssfsi.o)
+                0x00002dd2                __fixunssfsi
  .text.avr-libc.fplib
-                0x00002c72       0x7a e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
-                0x00002c72                __floatunsisf
-                0x00002c76                __floatsisf
+                0x00002e30       0x7a e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(floatsisf.o)
+                0x00002e30                __floatunsisf
+                0x00002e34                __floatsisf
  .text.avr-libc.fplib
-                0x00002cec       0x48 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
-                0x00002cec                __fp_cmp
+                0x00002eaa       0x48 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_cmp.o)
+                0x00002eaa                __fp_cmp
  .text.avr-libc.fplib
-                0x00002d34        0xc e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
-                0x00002d34                __fp_inf
+                0x00002ef2        0xc e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_inf.o)
+                0x00002ef2                __fp_inf
  .text.avr-libc.fplib
-                0x00002d40        0x6 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
-                0x00002d40                __fp_nan
+                0x00002efe        0x6 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_nan.o)
+                0x00002efe                __fp_nan
  .text.avr-libc.fplib
-                0x00002d46       0x4e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
-                0x00002d46                __fp_powser
+                0x00002f04       0x4e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_powser.o)
+                0x00002f04                __fp_powser
  .text.avr-libc.fplib
-                0x00002d94        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
-                0x00002d94                __fp_pscA
+                0x00002f52        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscA.o)
+                0x00002f52                __fp_pscA
  .text.avr-libc.fplib
-                0x00002da2        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
-                0x00002da2                __fp_pscB
+                0x00002f60        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_pscB.o)
+                0x00002f60                __fp_pscB
  .text.avr-libc.fplib
-                0x00002db0       0x22 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
-                0x00002db0                __fp_round
+                0x00002f6e       0x22 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_round.o)
+                0x00002f6e                __fp_round
  .text.avr-libc.fplib
-                0x00002dd2       0x44 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
-                0x00002dd2                __fp_split3
-                0x00002de2                __fp_splitA
+                0x00002f90       0x44 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_split3.o)
+                0x00002f90                __fp_split3
+                0x00002fa0                __fp_splitA
  .text.avr-libc.fplib
-                0x00002e16        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
-                0x00002e16                __fp_zero
-                0x00002e18                __fp_szero
+                0x00002fd4        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(fp_zero.o)
+                0x00002fd4                __fp_zero
+                0x00002fd6                __fp_szero
  .text.avr-libc.fplib
-                0x00002e24        0xa e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
-                0x00002e24                __gesf2
-                0x00002e24                __gtsf2
+                0x00002fe2        0xa e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(gesf2.o)
+                0x00002fe2                __gesf2
+                0x00002fe2                __gtsf2
  .text.avr-libc.fplib
-                0x00002e2e       0x10 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(inverse.o)
-                0x00002e2e                inverse
+                0x00002fec       0x10 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(inverse.o)
+                0x00002fec                inverse
  .text.avr-libc.fplib
-                0x00002e3e        0x8 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
-                0x00002e3e                __mulsf3
+                0x00002ffc        0x8 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3.o)
+                0x00002ffc                __mulsf3
  .text.avr-libc.fplib
-                0x00002e46       0xd2 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
-                0x00002e64                __mulsf3x
-                0x00002e6a                __mulsf3_pse
+                0x00003004       0xd2 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(mulsf3x.o)
+                0x00003022                __mulsf3x
+                0x00003028                __mulsf3_pse
  .text.avr-libc.fplib
-                0x00002f18        0x8 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
-                0x00002f18                square
+                0x000030d6        0x8 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(square.o)
+                0x000030d6                square
  .text._ZN14HardwareSerial9availableEv
-                0x00002f20       0x18 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00002f20                _ZN14HardwareSerial9availableEv
+                0x000030de       0x18 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x000030de                _ZN14HardwareSerial9availableEv
  .text._ZN14HardwareSerial4peekEv
-                0x00002f38       0x1c p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00002f38                _ZN14HardwareSerial4peekEv
+                0x000030f6       0x1c P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x000030f6                _ZN14HardwareSerial4peekEv
  .text._ZN14HardwareSerial4readEv
-                0x00002f54       0x28 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00002f54                _ZN14HardwareSerial4readEv
+                0x00003112       0x28 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00003112                _ZN14HardwareSerial4readEv
  .text._ZN14HardwareSerial17availableForWriteEv
-                0x00002f7c       0x1e p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00002f7c                _ZN14HardwareSerial17availableForWriteEv
+                0x0000313a       0x1e P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x0000313a                _ZN14HardwareSerial17availableForWriteEv
  .text._Z14serialEventRunv
-                0x00002f9a       0x1c p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00002f9a                _Z14serialEventRunv
+                0x00003158       0x1c P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00003158                _Z14serialEventRunv
  .text._ZN14HardwareSerial17_tx_udr_empty_irqEv
-                0x00002fb6       0x42 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00002fb6                _ZN14HardwareSerial17_tx_udr_empty_irqEv
+                0x00003174       0x42 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00003174                _ZN14HardwareSerial17_tx_udr_empty_irqEv
  .text._ZN14HardwareSerial5writeEh
-                0x00002ff8       0x8e p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00002ff8                _ZN14HardwareSerial5writeEh
+                0x000031b6       0x8e P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x000031b6                _ZN14HardwareSerial5writeEh
  .text._ZN14HardwareSerial5flushEv
-                0x00003086       0x44 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00003086                _ZN14HardwareSerial5flushEv
+                0x00003244       0x44 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00003244                _ZN14HardwareSerial5flushEv
  .text._ZN14HardwareSerial5beginEmh
-                0x000030ca       0xca p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x000030ca                _ZN14HardwareSerial5beginEmh
+                0x00003288       0xca P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00003288                _ZN14HardwareSerial5beginEmh
  .text.__vector_18
-                0x00003194       0x64 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x00003194                __vector_18
+                0x00003352       0x64 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00003352                __vector_18
  .text.__vector_19
-                0x000031f8       0x4c p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x000031f8                __vector_19
+                0x000033b6       0x4c P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x000033b6                __vector_19
  .text._Z17Serial0_availablev
-                0x00003244       0x14 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x00003244                _Z17Serial0_availablev
+                0x00003402       0x14 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00003402                _Z17Serial0_availablev
  .text.startup._GLOBAL__sub_I___vector_18
-                0x00003258       0x5a p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00003416       0x5a P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
  .text.initVariant
-                0x000032b2        0x2 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
-                0x000032b2                initVariant
+                0x00003470        0x2 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+                0x00003470                initVariant
  .text.startup.main
-                0x000032b4       0x1e p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
-                0x000032b4                main
+                0x00003472       0x1e P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+                0x00003472                main
+ .text._Znwj    0x00003490        0x4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+                0x00003490                _Znwj
  .text._ZN5Print5writeEPKhj
-                0x000032d2       0x54 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x000032d2                _ZN5Print5writeEPKhj
+                0x00003494       0x54 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00003494                _ZN5Print5writeEPKhj
  .text._ZN5Print5writeEPKc
-                0x00003326       0x2a p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x00003326                _ZN5Print5writeEPKc
+                0x000034e8       0x2a P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x000034e8                _ZN5Print5writeEPKc
  .text._ZN5Print5printEPKc
-                0x00003350        0x4 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x00003350                _ZN5Print5printEPKc
+                0x00003512        0x4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00003512                _ZN5Print5printEPKc
  .text._ZN5Print5printEc
-                0x00003354        0xe p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x00003354                _ZN5Print5printEc
+                0x00003516        0xe P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00003516                _ZN5Print5printEc
  .text._ZN5Print7printlnEv
-                0x00003362        0x8 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x00003362                _ZN5Print7printlnEv
+                0x00003524        0x8 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00003524                _ZN5Print7printlnEv
  .text._ZN5Print7printlnEPKc
-                0x0000336a       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x0000336a                _ZN5Print7printlnEPKc
+                0x0000352c       0x24 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x0000352c                _ZN5Print7printlnEPKc
  .text._ZN5Print11printNumberEmh
-                0x0000338e       0x92 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x0000338e                _ZN5Print11printNumberEmh
+                0x00003550       0x92 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00003550                _ZN5Print11printNumberEmh
  .text._ZN5Print5printEmi
-                0x00003420       0x1a p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x00003420                _ZN5Print5printEmi
+                0x000035e2       0x1a P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x000035e2                _ZN5Print5printEmi
  .text._ZN5Print5printEji
-                0x0000343a        0xc p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x0000343a                _ZN5Print5printEji
- .text._ZN5Print7printlnEmi
-                0x00003446       0x24 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x00003446                _ZN5Print7printlnEmi
+                0x000035fc        0xc P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x000035fc                _ZN5Print5printEji
  .text._ZN5Print5printEli
-                0x0000346a       0x90 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x0000346a                _ZN5Print5printEli
+                0x00003608       0x90 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00003608                _ZN5Print5printEli
  .text._ZN5Print5printEii
-                0x000034fa        0xe p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x000034fa                _ZN5Print5printEii
+                0x00003698        0xe P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00003698                _ZN5Print5printEii
  .text._ZN5Print10printFloatEdh
-                0x00003508      0x1b6 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x00003508                _ZN5Print10printFloatEdh
+                0x000036a6      0x1b6 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x000036a6                _ZN5Print10printFloatEdh
  .text._ZN5Print5printEdi
-                0x000036be        0x4 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
-                0x000036be                _ZN5Print5printEdi
+                0x0000385c        0x4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x0000385c                _ZN5Print5printEdi
  .text.__vector_16
-                0x000036c2       0x8c p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
-                0x000036c2                __vector_16
- .text.millis   0x0000374e       0x18 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
-                0x0000374e                millis
- .text.micros   0x00003766       0x44 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
-                0x00003766                micros
- .text.init     0x000037aa       0x76 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
-                0x000037aa                init
- .text.pinMode  0x00003820       0x78 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
-                0x00003820                pinMode
+                0x00003860       0x8c P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+                0x00003860                __vector_16
+ .text.millis   0x000038ec       0x18 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+                0x000038ec                millis
+ .text.micros   0x00003904       0x44 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+                0x00003904                micros
+ .text.init     0x00003948       0x76 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+                0x00003948                init
+ .text.pinMode  0x000039be       0x78 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x000039be                pinMode
  .text._Z3maplllll
-                0x00003898       0x82 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
-                0x00003898                _Z3maplllll
+                0x00003a36       0x82 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+                0x00003a36                _Z3maplllll
  .text.avr-libc.fplib
-                0x0000391a        0xa e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(unordsf2.o)
-                0x0000391a                __unordsf2
+                0x00003ab8        0xa e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libm.a(unordsf2.o)
+                0x00003ab8                __unordsf2
  .text.libgcc.mul
-                0x00003924       0x20 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
-                0x00003924                __mulsi3
+                0x00003ac2       0x20 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_mulsi3.o)
+                0x00003ac2                __mulsi3
  .text.libgcc.div
-                0x00003944       0x44 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
-                0x00003944                __udivmodsi4
+                0x00003ae2       0x44 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_udivmodsi4.o)
+                0x00003ae2                __udivmodsi4
  .text.libgcc.div
-                0x00003988       0x2e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodsi4.o)
-                0x00003988                __divmodsi4
+                0x00003b26       0x2e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_divmodsi4.o)
+                0x00003b26                __divmodsi4
  .text.libgcc.div
-                0x000039b6       0x10 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_negsi2.o)
-                0x000039b6                __negsi2
- .text.libgcc   0x000039c6        0xc e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
-                0x000039c6                __tablejump2__
+                0x00003b54       0x10 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_negsi2.o)
+                0x00003b54                __negsi2
+ .text.libgcc   0x00003b64        0xc e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_tablejump2.o)
+                0x00003b64                __tablejump2__
  .text.libgcc.mul
-                0x000039d2       0x16 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
-                0x000039d2                __muluhisi3
+                0x00003b70       0x16 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_muluhisi3.o)
+                0x00003b70                __muluhisi3
  .text.libgcc.mul
-                0x000039e8       0x1e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
-                0x000039e8                __umulhisi3
+                0x00003b86       0x1e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_umulhisi3.o)
+                0x00003b86                __umulhisi3
  .text.avr-libc
-                0x00003a06        0x8 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(atof.o)
-                0x00003a06                atof
+                0x00003ba4      0x242 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00003ba4                malloc
+                0x00003cd4                free
  .text.avr-libc
-                0x00003a0e        0xa e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtok.o)
-                0x00003a0e                strtok
+                0x00003de6        0x8 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(atof.o)
+                0x00003de6                atof
  .text.avr-libc
-                0x00003a18       0x12 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcmp.o)
-                0x00003a18                strcmp
+                0x00003dee        0xa e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtok.o)
+                0x00003dee                strtok
  .text.avr-libc
-                0x00003a2a        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy.o)
-                0x00003a2a                strcpy
+                0x00003df8       0x12 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcmp.o)
+                0x00003df8                strcmp
  .text.avr-libc
-                0x00003a38       0x4e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtok_r.o)
-                0x00003a38                strtok_r
+                0x00003e0a        0xe e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strcpy.o)
+                0x00003e0a                strcpy
  .text.avr-libc
-                0x00003a86      0x29c e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtod.o)
-                0x00003a86                strtod
+                0x00003e18       0x4e e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtok_r.o)
+                0x00003e18                strtok_r
  .text.avr-libc
-                0x00003d22       0x12 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(isspace.o)
-                0x00003d22                isspace
+                0x00003e66      0x29c e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtod.o)
+                0x00003e66                strtod
  .text.avr-libc
-                0x00003d34       0x30 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strncasecmp_P.o)
-                0x00003d34                strncasecmp_P
+                0x00004102       0x12 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(isspace.o)
+                0x00004102                isspace
  .text.avr-libc
-                0x00003d64        0x6 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(cty_isfalse.o)
-                0x00003d64                __ctype_isfalse
-                0x00003d68                __ctype_istrue
+                0x00004114       0x30 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strncasecmp_P.o)
+                0x00004114                strncasecmp_P
+ .text.avr-libc
+                0x00004144        0x6 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(cty_isfalse.o)
+                0x00004144                __ctype_isfalse
+                0x00004148                __ctype_istrue
  .text.libgcc.prologue
-                0x00003d6a       0x38 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_prologue.o)
-                0x00003d6a                __prologue_saves__
+                0x0000414a       0x38 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_prologue.o)
+                0x0000414a                __prologue_saves__
  .text.libgcc.prologue
-                0x00003da2       0x36 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_epilogue.o)
-                0x00003da2                __epilogue_restores__
-                0x00003dd8                . = ALIGN (0x2)
+                0x00004182       0x36 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_epilogue.o)
+                0x00004182                __epilogue_restores__
+                0x000041b8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00003dd8        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00003dd8                _exit
-                0x00003dd8                exit
+ .fini9         0x000041b8        0x0 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x000041b8                _exit
+                0x000041b8                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -2191,249 +2206,259 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00003dd8        0x4 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x000041b8        0x4 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003ddc                _etext = .
+                0x000041bc                _etext = .
 
-.data           0x00800100      0x19a load address 0x00003ddc
+.data           0x00800100      0x1a2 load address 0x000041bc
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
+ .data          0x00800100        0x6 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x00800100                __malloc_heap_end
+                0x00800102                __malloc_heap_start
+                0x00800104                __malloc_margin
  *(.data*)
- .data.Mot1_RpmPtr
-                0x00800100        0x2 Sketch.o
-                0x00800100                Mot1_RpmPtr
- .data.Mot0_RpmPtr
-                0x00800102        0x2 Sketch.o
-                0x00800102                Mot0_RpmPtr
  .data.connectGiroToMot
-                0x00800104        0x1 Sketch.o
-                0x00800104                connectGiroToMot
+                0x00800106        0x1 Sketch.o
+                0x00800106                connectGiroToMot
  .data._ZN6I2Cdev11readTimeoutE
-                0x00800105        0x2 src/libraries/I2Cdev/I2Cdev.o
-                0x00800105                _ZN6I2Cdev11readTimeoutE
+                0x00800107        0x2 src/libraries/I2Cdev/I2Cdev.o
+                0x00800107                _ZN6I2Cdev11readTimeoutE
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800107      0x15f Sketch.o
-                                0x161 (size before relaxing)
+                0x00800109      0x166 Sketch.o
+                                0x168 (size before relaxing)
  .rodata._ZTV7TwoWire
-                0x00800266       0x12 src/libraries/Wire/src/Wire.o
-                0x00800266                _ZTV7TwoWire
+                0x0080026f       0x12 src/libraries/Wire/src/Wire.o
+                0x0080026f                _ZTV7TwoWire
  .rodata._ZTV14HardwareSerial
-                0x00800278       0x12 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
-                0x00800278                _ZTV14HardwareSerial
+                0x00800281       0x12 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00800281                _ZTV14HardwareSerial
  .rodata.str1.1
-                0x0080028a        0xf p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00800293        0xf P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  *(.gnu.linkonce.r*)
-                0x0080029a                . = ALIGN (0x2)
- *fill*         0x00800299        0x1 
-                0x0080029a                _edata = .
-                0x0080029a                PROVIDE (__data_end, .)
+                0x008002a2                . = ALIGN (0x2)
+                0x008002a2                _edata = .
+                0x008002a2                PROVIDE (__data_end, .)
 
-.bss            0x0080029a      0x345
-                0x0080029a                PROVIDE (__bss_start, .)
+.bss            0x008002a2      0x242
+                0x008002a2                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x0080029a        0x2 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtok.o)
+ .bss           0x008002a2        0x2 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtok.o)
  *(.bss*)
  .bss._ZZ15Ser_ReceiveDatavE3ndx
-                0x0080029c        0x1 Sketch.o
+                0x008002a4        0x1 Sketch.o
+ .bss.dirStart  0x008002a5        0x4 Sketch.o
+                0x008002a5                dirStart
  .bss.self_balance_pid_setpoint
-                0x0080029d        0x4 Sketch.o
-                0x0080029d                self_balance_pid_setpoint
- .bss.loopTime  0x008002a1        0x4 Sketch.o
-                0x008002a1                loopTime
- .bss.Giro_prevTime
-                0x008002a5        0x4 Sketch.o
-                0x008002a5                Giro_prevTime
- .bss.Giro_loopTime
                 0x008002a9        0x4 Sketch.o
-                0x008002a9                Giro_loopTime
+                0x008002a9                self_balance_pid_setpoint
+ .bss.loopTime  0x008002ad        0x4 Sketch.o
+                0x008002ad                loopTime
+ .bss.Giro_prevTime
+                0x008002b1        0x4 Sketch.o
+                0x008002b1                Giro_prevTime
+ .bss.Giro_loopTime
+                0x008002b5        0x4 Sketch.o
+                0x008002b5                Giro_loopTime
  .bss.Giro_currTime
-                0x008002ad        0x4 Sketch.o
-                0x008002ad                Giro_currTime
+                0x008002b9        0x4 Sketch.o
+                0x008002b9                Giro_currTime
+ .bss.DirLeft   0x008002bd        0x1 Sketch.o
+                0x008002bd                DirLeft
+ .bss.DirRight  0x008002be        0x1 Sketch.o
+                0x008002be                DirRight
+ .bss.DirDn     0x008002bf        0x1 Sketch.o
+                0x008002bf                DirDn
+ .bss.DirUp     0x008002c0        0x1 Sketch.o
+                0x008002c0                DirUp
  .bss.printGiroPid
-                0x008002b1        0x1 Sketch.o
-                0x008002b1                printGiroPid
+                0x008002c1        0x1 Sketch.o
+                0x008002c1                printGiroPid
  .bss.printMotPid
-                0x008002b2        0x1 Sketch.o
-                0x008002b2                printMotPid
+                0x008002c2        0x1 Sketch.o
+                0x008002c2                printMotPid
  .bss.printRawGiro
-                0x008002b3        0x1 Sketch.o
-                0x008002b3                printRawGiro
- .bss.PidPtr    0x008002b4        0x2 Sketch.o
-                0x008002b4                PidPtr
- .bss.CfgPtr    0x008002b6        0x2 Sketch.o
-                0x008002b6                CfgPtr
+                0x008002c3        0x1 Sketch.o
+                0x008002c3                printRawGiro
+ .bss.PidPtr    0x008002c4        0x2 Sketch.o
+                0x008002c4                PidPtr
+ .bss.CfgPtr    0x008002c6        0x2 Sketch.o
+                0x008002c6                CfgPtr
  .bss.Ser_NewData
-                0x008002b8        0x1 Sketch.o
-                0x008002b8                Ser_NewData
+                0x008002c8        0x1 Sketch.o
+                0x008002c8                Ser_NewData
  .bss.Ser_Buffer
-                0x008002b9       0x50 Sketch.o
-                0x008002b9                Ser_Buffer
- .bss.Giro_Pid  0x00800309       0x3c Sketch.o
+                0x008002c9       0x40 Sketch.o
+                0x008002c9                Ser_Buffer
+ .bss.Giro_Pid  0x00800309        0x2 Sketch.o
                 0x00800309                Giro_Pid
- .bss.Mot1_Pid  0x00800345       0x3c Sketch.o
-                0x00800345                Mot1_Pid
- .bss.Mot0_Pid  0x00800381       0x3c Sketch.o
-                0x00800381                Mot0_Pid
+ .bss.Mot1_Pid  0x0080030b        0x2 Sketch.o
+                0x0080030b                Mot1_Pid
+ .bss.Mot0_Pid  0x0080030d        0x2 Sketch.o
+                0x0080030d                Mot0_Pid
  .bss.Giro_PidCtl
-                0x008003bd       0x1d Sketch.o
-                0x008003bd                Giro_PidCtl
+                0x0080030f        0x2 Sketch.o
+                0x0080030f                Giro_PidCtl
  .bss.Mot1_PidCtl
-                0x008003da       0x1d Sketch.o
-                0x008003da                Mot1_PidCtl
+                0x00800311        0x2 Sketch.o
+                0x00800311                Mot1_PidCtl
  .bss.Mot0_PidCtl
-                0x008003f7       0x1d Sketch.o
-                0x008003f7                Mot0_PidCtl
- .bss.running   0x00800414        0x1 Sketch.o
-                0x00800414                running
+                0x00800313        0x2 Sketch.o
+                0x00800313                Mot0_PidCtl
+ .bss.running   0x00800315        0x1 Sketch.o
+                0x00800315                running
  .bss.previousMilliSerialLog
-                0x00800415        0x4 Sketch.o
-                0x00800415                previousMilliSerialLog
+                0x00800316        0x4 Sketch.o
+                0x00800316                previousMilliSerialLog
  .bss.previousMilliEnc
-                0x00800419        0x4 Sketch.o
-                0x00800419                previousMilliEnc
+                0x0080031a        0x4 Sketch.o
+                0x0080031a                previousMilliEnc
  .bss.Giro_PrevAngle
-                0x0080041d        0x4 Sketch.o
-                0x0080041d                Giro_PrevAngle
+                0x0080031e        0x4 Sketch.o
+                0x0080031e                Giro_PrevAngle
  .bss.Giro_FilteredAngle
-                0x00800421        0x4 Sketch.o
-                0x00800421                Giro_FilteredAngle
+                0x00800322        0x4 Sketch.o
+                0x00800322                Giro_FilteredAngle
  .bss.Giro_Angle
-                0x00800425        0x4 Sketch.o
-                0x00800425                Giro_Angle
+                0x00800326        0x4 Sketch.o
+                0x00800326                Giro_Angle
  .bss.Giro_AccAngle
-                0x00800429        0x4 Sketch.o
-                0x00800429                Giro_AccAngle
+                0x0080032a        0x4 Sketch.o
+                0x0080032a                Giro_AccAngle
  .bss.Giro_Rate
-                0x0080042d        0x2 Sketch.o
-                0x0080042d                Giro_Rate
+                0x0080032e        0x2 Sketch.o
+                0x0080032e                Giro_Rate
  .bss.Giro_RotX
-                0x0080042f        0x2 Sketch.o
-                0x0080042f                Giro_RotX
+                0x00800330        0x2 Sketch.o
+                0x00800330                Giro_RotX
  .bss.Giro_AccZ
-                0x00800431        0x2 Sketch.o
-                0x00800431                Giro_AccZ
+                0x00800332        0x2 Sketch.o
+                0x00800332                Giro_AccZ
  .bss.Giro_AccY
-                0x00800433        0x2 Sketch.o
-                0x00800433                Giro_AccY
- .bss.mpu       0x00800435        0xf Sketch.o
-                0x00800435                mpu
- .bss.sonar     0x00800444       0x12 Sketch.o
-                0x00800444                sonar
- .bss.intFunc   0x00800456        0x2 src/libraries/NewPing/NewPing.o
-                0x00800456                intFunc
+                0x00800334        0x2 Sketch.o
+                0x00800334                Giro_AccY
+ .bss.mpu       0x00800336        0xf Sketch.o
+                0x00800336                mpu
+ .bss.sonar     0x00800345       0x12 Sketch.o
+                0x00800345                sonar
+ .bss.intFunc   0x00800357        0x2 src/libraries/NewPing/NewPing.o
+                0x00800357                intFunc
  .bss.twi_error
-                0x00800458        0x1 src/libraries/Wire/src/utility/twi.o
+                0x00800359        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_rxBufferIndex
-                0x00800459        0x1 src/libraries/Wire/src/utility/twi.o
+                0x0080035a        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_rxBuffer
-                0x0080045a       0x20 src/libraries/Wire/src/utility/twi.o
+                0x0080035b       0x20 src/libraries/Wire/src/utility/twi.o
  .bss.twi_txBufferLength
-                0x0080047a        0x1 src/libraries/Wire/src/utility/twi.o
+                0x0080037b        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_txBufferIndex
-                0x0080047b        0x1 src/libraries/Wire/src/utility/twi.o
+                0x0080037c        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_txBuffer
-                0x0080047c       0x20 src/libraries/Wire/src/utility/twi.o
+                0x0080037d       0x20 src/libraries/Wire/src/utility/twi.o
  .bss.twi_masterBufferLength
-                0x0080049c        0x1 src/libraries/Wire/src/utility/twi.o
+                0x0080039d        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_masterBufferIndex
-                0x0080049d        0x1 src/libraries/Wire/src/utility/twi.o
+                0x0080039e        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_masterBuffer
-                0x0080049e       0x20 src/libraries/Wire/src/utility/twi.o
+                0x0080039f       0x20 src/libraries/Wire/src/utility/twi.o
  .bss.twi_onSlaveReceive
-                0x008004be        0x2 src/libraries/Wire/src/utility/twi.o
+                0x008003bf        0x2 src/libraries/Wire/src/utility/twi.o
  .bss.twi_onSlaveTransmit
-                0x008004c0        0x2 src/libraries/Wire/src/utility/twi.o
+                0x008003c1        0x2 src/libraries/Wire/src/utility/twi.o
  .bss.twi_inRepStart
-                0x008004c2        0x1 src/libraries/Wire/src/utility/twi.o
+                0x008003c3        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_sendStop
-                0x008004c3        0x1 src/libraries/Wire/src/utility/twi.o
+                0x008003c4        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_slarw
-                0x008004c4        0x1 src/libraries/Wire/src/utility/twi.o
+                0x008003c5        0x1 src/libraries/Wire/src/utility/twi.o
  .bss.twi_state
-                0x008004c5        0x1 src/libraries/Wire/src/utility/twi.o
- .bss.Wire      0x008004c6        0xc src/libraries/Wire/src/Wire.o
-                0x008004c6                Wire
+                0x008003c6        0x1 src/libraries/Wire/src/utility/twi.o
+ .bss.Wire      0x008003c7        0xc src/libraries/Wire/src/Wire.o
+                0x008003c7                Wire
  .bss._ZN7TwoWire12transmittingE
-                0x008004d2        0x1 src/libraries/Wire/src/Wire.o
-                0x008004d2                _ZN7TwoWire12transmittingE
+                0x008003d3        0x1 src/libraries/Wire/src/Wire.o
+                0x008003d3                _ZN7TwoWire12transmittingE
  .bss._ZN7TwoWire14txBufferLengthE
-                0x008004d3        0x1 src/libraries/Wire/src/Wire.o
-                0x008004d3                _ZN7TwoWire14txBufferLengthE
+                0x008003d4        0x1 src/libraries/Wire/src/Wire.o
+                0x008003d4                _ZN7TwoWire14txBufferLengthE
  .bss._ZN7TwoWire13txBufferIndexE
-                0x008004d4        0x1 src/libraries/Wire/src/Wire.o
-                0x008004d4                _ZN7TwoWire13txBufferIndexE
+                0x008003d5        0x1 src/libraries/Wire/src/Wire.o
+                0x008003d5                _ZN7TwoWire13txBufferIndexE
  .bss._ZN7TwoWire8txBufferE
-                0x008004d5       0x20 src/libraries/Wire/src/Wire.o
-                0x008004d5                _ZN7TwoWire8txBufferE
+                0x008003d6       0x20 src/libraries/Wire/src/Wire.o
+                0x008003d6                _ZN7TwoWire8txBufferE
  .bss._ZN7TwoWire9txAddressE
-                0x008004f5        0x1 src/libraries/Wire/src/Wire.o
-                0x008004f5                _ZN7TwoWire9txAddressE
+                0x008003f6        0x1 src/libraries/Wire/src/Wire.o
+                0x008003f6                _ZN7TwoWire9txAddressE
  .bss._ZN7TwoWire14rxBufferLengthE
-                0x008004f6        0x1 src/libraries/Wire/src/Wire.o
-                0x008004f6                _ZN7TwoWire14rxBufferLengthE
+                0x008003f7        0x1 src/libraries/Wire/src/Wire.o
+                0x008003f7                _ZN7TwoWire14rxBufferLengthE
  .bss._ZN7TwoWire13rxBufferIndexE
-                0x008004f7        0x1 src/libraries/Wire/src/Wire.o
-                0x008004f7                _ZN7TwoWire13rxBufferIndexE
+                0x008003f8        0x1 src/libraries/Wire/src/Wire.o
+                0x008003f8                _ZN7TwoWire13rxBufferIndexE
  .bss._ZN7TwoWire8rxBufferE
-                0x008004f8       0x20 src/libraries/Wire/src/Wire.o
-                0x008004f8                _ZN7TwoWire8rxBufferE
+                0x008003f9       0x20 src/libraries/Wire/src/Wire.o
+                0x008003f9                _ZN7TwoWire8rxBufferE
  .bss.accelgyro
-                0x00800518        0xf src/MPU6050Calib.o
-                0x00800518                accelgyro
+                0x00800419        0xf src/MPU6050Calib.o
+                0x00800419                accelgyro
  .bss.Mot0_tmpState
-                0x00800527        0x1 src/Motors.o
-                0x00800527                Mot0_tmpState
+                0x00800428        0x1 src/my_libs/ENC_lib.o
+                0x00800428                Mot0_tmpState
  .bss.Mot0_p2Val
-                0x00800528        0x1 src/Motors.o
-                0x00800528                Mot0_p2Val
+                0x00800429        0x1 src/my_libs/ENC_lib.o
+                0x00800429                Mot0_p2Val
  .bss.Mot0_p1Val
-                0x00800529        0x1 src/Motors.o
-                0x00800529                Mot0_p1Val
+                0x0080042a        0x1 src/my_libs/ENC_lib.o
+                0x0080042a                Mot0_p1Val
  .bss.Mot0_state
-                0x0080052a        0x1 src/Motors.o
-                0x0080052a                Mot0_state
+                0x0080042b        0x1 src/my_libs/ENC_lib.o
+                0x0080042b                Mot0_state
  .bss.Mot1_tmpState
-                0x0080052b        0x1 src/Motors.o
-                0x0080052b                Mot1_tmpState
+                0x0080042c        0x1 src/my_libs/ENC_lib.o
+                0x0080042c                Mot1_tmpState
  .bss.Mot1_p2Val
-                0x0080052c        0x1 src/Motors.o
-                0x0080052c                Mot1_p2Val
+                0x0080042d        0x1 src/my_libs/ENC_lib.o
+                0x0080042d                Mot1_p2Val
  .bss.Mot1_p1Val
-                0x0080052d        0x1 src/Motors.o
-                0x0080052d                Mot1_p1Val
+                0x0080042e        0x1 src/my_libs/ENC_lib.o
+                0x0080042e                Mot1_p1Val
  .bss.Mot1_state
-                0x0080052e        0x1 src/Motors.o
-                0x0080052e                Mot1_state
- .bss.Mot1_Enc  0x0080052f        0x4 src/Motors.o
-                0x0080052f                Mot1_Enc
- .bss.Mot0_Enc  0x00800533        0x4 src/Motors.o
-                0x00800533                Mot0_Enc
- .bss.Serial    0x00800537       0x9d p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
-                0x00800537                Serial
+                0x0080042f        0x1 src/my_libs/ENC_lib.o
+                0x0080042f                Mot1_state
+ .bss.Mot1_Enc  0x00800430        0x4 src/my_libs/ENC_lib.o
+                0x00800430                Mot1_Enc
+ .bss.Mot0_Enc  0x00800434        0x4 src/my_libs/ENC_lib.o
+                0x00800434                Mot0_Enc
+ .bss.Serial    0x00800438       0x9d P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00800438                Serial
  .bss.timer0_fract
-                0x008005d4        0x1 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+                0x008004d5        0x1 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
  .bss.timer0_millis
-                0x008005d5        0x4 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
-                0x008005d5                timer0_millis
+                0x008004d6        0x4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+                0x008004d6                timer0_millis
  .bss.timer0_overflow_count
-                0x008005d9        0x4 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
-                0x008005d9                timer0_overflow_count
+                0x008004da        0x4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+                0x008004da                timer0_overflow_count
  *(COMMON)
- COMMON         0x008005dd        0x2 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(errno.o)
-                0x008005dd                errno
-                0x008005df                PROVIDE (__bss_end, .)
-                0x00003ddc                __data_load_start = LOADADDR (.data)
-                0x00003f76                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x008004de        0x4 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
+                0x008004de                __brkval
+                0x008004e0                __flp
+ COMMON         0x008004e2        0x2 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(errno.o)
+                0x008004e2                errno
+                0x008004e4                PROVIDE (__bss_end, .)
+                0x000041bc                __data_load_start = LOADADDR (.data)
+                0x0000435e                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008005df        0x0
+.noinit         0x008004e4        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x008005df                _end = .
-                0x008005df                PROVIDE (__heap_start, .)
+                0x008004e4                _end = .
+                0x008004e4                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -2483,15 +2508,18 @@ END GROUP
  .comment       0x00000030       0x31 src/libraries/Wire/src/utility/twi.o
  .comment       0x00000030       0x31 src/libraries/Wire/src/Wire.o
  .comment       0x00000030       0x31 src/MPU6050Calib.o
- .comment       0x00000030       0x31 src/Motors.o
+ .comment       0x00000030       0x31 src/my_libs/ENC_lib.o
+ .comment       0x00000030       0x31 src/my_libs/MOT_lib.o
  .comment       0x00000030       0x31 src/my_libs/pwm_basic.o
- .comment       0x00000030       0x31 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .comment       0x00000030       0x31 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .comment       0x00000030       0x31 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
- .comment       0x00000030       0x31 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .comment       0x00000030       0x31 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .comment       0x00000030       0x31 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
- .comment       0x00000030       0x31 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .comment       0x00000030       0x31 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .comment       0x00000030       0x31 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .comment       0x00000030       0x31 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .comment       0x00000030       0x31 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .comment       0x00000030       0x31 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .comment       0x00000030       0x31 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .comment       0x00000030       0x31 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .comment       0x00000030       0x31 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .comment       0x00000030       0x31 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(malloc.o)
  .comment       0x00000030       0x31 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtok.o)
  .comment       0x00000030       0x31 e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(strtod.o)
  .comment       0x00000030       0x2c e:/ides/atmelstudio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr5\libc.a(errno.o)
@@ -2517,184 +2545,202 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000     0x1038
+.debug_aranges  0x00000000     0x1080
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x78 Sketch.o
+                0x00000000       0x80 Sketch.o
  .debug_aranges
-                0x00000078       0x90 src/libraries/Arduino-PID-Library-master/PID_v1.o
+                0x00000080       0x90 src/libraries/Arduino-PID-Library-master/PID_v1.o
  .debug_aranges
-                0x00000108       0xa0 src/libraries/I2Cdev/I2Cdev.o
+                0x00000110       0xa0 src/libraries/I2Cdev/I2Cdev.o
  .debug_aranges
-                0x000001a8      0x878 src/libraries/MPU6050/MPU6050.o
+                0x000001b0      0x878 src/libraries/MPU6050/MPU6050.o
  .debug_aranges
-                0x00000a20       0xa0 src/libraries/NewPing/NewPing.o
+                0x00000a28       0xa0 src/libraries/NewPing/NewPing.o
  .debug_aranges
-                0x00000ac0       0x80 src/libraries/Wire/src/utility/twi.o
+                0x00000ac8       0x80 src/libraries/Wire/src/utility/twi.o
  .debug_aranges
-                0x00000b40       0xf8 src/libraries/Wire/src/Wire.o
+                0x00000b48       0xf8 src/libraries/Wire/src/Wire.o
  .debug_aranges
-                0x00000c38       0x40 src/MPU6050Calib.o
+                0x00000c40       0x40 src/MPU6050Calib.o
  .debug_aranges
-                0x00000c78       0x78 src/Motors.o
+                0x00000c80       0x30 src/my_libs/ENC_lib.o
  .debug_aranges
-                0x00000cf0       0xa0 src/my_libs/pwm_basic.o
+                0x00000cb0       0x60 src/my_libs/MOT_lib.o
  .debug_aranges
-                0x00000d90       0x68 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+                0x00000d10       0xa0 src/my_libs/pwm_basic.o
  .debug_aranges
-                0x00000df8       0x48 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+                0x00000db0       0x68 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
  .debug_aranges
-                0x00000e40       0x30 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+                0x00000e18       0x48 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
  .debug_aranges
-                0x00000e70      0x100 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+                0x00000e60       0x30 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
  .debug_aranges
-                0x00000f70       0x48 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+                0x00000e90       0x28 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
  .debug_aranges
-                0x00000fb8       0x38 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+                0x00000eb8      0x100 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
  .debug_aranges
-                0x00000ff0       0x48 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+                0x00000fb8       0x48 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .debug_aranges
+                0x00001000       0x38 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_aranges
+                0x00001038       0x48 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0x1dd7a
+.debug_info     0x00000000    0x1dfe3
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x5f4 E:/IDEs/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_info    0x000005f4     0x467f Sketch.o
- .debug_info    0x00004c73      0xc5a src/libraries/Arduino-PID-Library-master/PID_v1.o
- .debug_info    0x000058cd     0x1198 src/libraries/I2Cdev/I2Cdev.o
- .debug_info    0x00006a65     0x8c79 src/libraries/MPU6050/MPU6050.o
- .debug_info    0x0000f6de      0xd03 src/libraries/NewPing/NewPing.o
- .debug_info    0x000103e1      0x604 src/libraries/Wire/src/utility/twi.o
- .debug_info    0x000109e5     0x27b4 src/libraries/Wire/src/Wire.o
- .debug_info    0x00013199     0x3191 src/MPU6050Calib.o
- .debug_info    0x0001632a      0x762 src/Motors.o
- .debug_info    0x00016a8c      0x320 src/my_libs/pwm_basic.o
- .debug_info    0x00016dac     0x1e89 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_info    0x00018c35     0x1b16 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_info    0x0001a74b      0x237 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
- .debug_info    0x0001a982     0x28ff p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .debug_info    0x0001d281      0x2cb p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .debug_info    0x0001d54c      0x5fe p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_info    0x0001db4a      0x230 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .debug_info    0x000005f4     0x465c Sketch.o
+ .debug_info    0x00004c50      0xc5a src/libraries/Arduino-PID-Library-master/PID_v1.o
+ .debug_info    0x000058aa     0x1198 src/libraries/I2Cdev/I2Cdev.o
+ .debug_info    0x00006a42     0x8c79 src/libraries/MPU6050/MPU6050.o
+ .debug_info    0x0000f6bb      0xd03 src/libraries/NewPing/NewPing.o
+ .debug_info    0x000103be      0x604 src/libraries/Wire/src/utility/twi.o
+ .debug_info    0x000109c2     0x27b4 src/libraries/Wire/src/Wire.o
+ .debug_info    0x00013176     0x3191 src/MPU6050Calib.o
+ .debug_info    0x00016307      0x2ec src/my_libs/ENC_lib.o
+ .debug_info    0x000165f3      0x5e6 src/my_libs/MOT_lib.o
+ .debug_info    0x00016bd9      0x320 src/my_libs/pwm_basic.o
+ .debug_info    0x00016ef9     0x1e89 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_info    0x00018d82     0x1b16 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_info    0x0001a898      0x237 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .debug_info    0x0001aacf      0x11c P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .debug_info    0x0001abeb     0x28ff P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .debug_info    0x0001d4ea      0x2cb P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .debug_info    0x0001d7b5      0x5fe P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_info    0x0001ddb3      0x230 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
 
-.debug_abbrev   0x00000000     0x3643
+.debug_abbrev   0x00000000     0x37fa
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x5a2 E:/IDEs/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_abbrev  0x000005a2      0x56a Sketch.o
- .debug_abbrev  0x00000b0c      0x2d2 src/libraries/Arduino-PID-Library-master/PID_v1.o
- .debug_abbrev  0x00000dde      0x2d3 src/libraries/I2Cdev/I2Cdev.o
- .debug_abbrev  0x000010b1      0x2f5 src/libraries/MPU6050/MPU6050.o
- .debug_abbrev  0x000013a6      0x3b7 src/libraries/NewPing/NewPing.o
- .debug_abbrev  0x0000175d      0x260 src/libraries/Wire/src/utility/twi.o
- .debug_abbrev  0x000019bd      0x581 src/libraries/Wire/src/Wire.o
- .debug_abbrev  0x00001f3e      0x2df src/MPU6050Calib.o
- .debug_abbrev  0x0000221d      0x1dd src/Motors.o
- .debug_abbrev  0x000023fa       0xd6 src/my_libs/pwm_basic.o
- .debug_abbrev  0x000024d0      0x432 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_abbrev  0x00002902      0x3ce p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_abbrev  0x00002cd0      0x12d p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
- .debug_abbrev  0x00002dfd      0x47a p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .debug_abbrev  0x00003277      0x146 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .debug_abbrev  0x000033bd      0x15b p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_abbrev  0x00003518      0x12b p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .debug_abbrev  0x000005a2      0x583 Sketch.o
+ .debug_abbrev  0x00000b25      0x2d2 src/libraries/Arduino-PID-Library-master/PID_v1.o
+ .debug_abbrev  0x00000df7      0x2d3 src/libraries/I2Cdev/I2Cdev.o
+ .debug_abbrev  0x000010ca      0x2f5 src/libraries/MPU6050/MPU6050.o
+ .debug_abbrev  0x000013bf      0x3b7 src/libraries/NewPing/NewPing.o
+ .debug_abbrev  0x00001776      0x260 src/libraries/Wire/src/utility/twi.o
+ .debug_abbrev  0x000019d6      0x581 src/libraries/Wire/src/Wire.o
+ .debug_abbrev  0x00001f57      0x2df src/MPU6050Calib.o
+ .debug_abbrev  0x00002236       0xf7 src/my_libs/ENC_lib.o
+ .debug_abbrev  0x0000232d      0x1b6 src/my_libs/MOT_lib.o
+ .debug_abbrev  0x000024e3       0xd6 src/my_libs/pwm_basic.o
+ .debug_abbrev  0x000025b9      0x432 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_abbrev  0x000029eb      0x3ce P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_abbrev  0x00002db9      0x12d P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .debug_abbrev  0x00002ee6       0xce P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .debug_abbrev  0x00002fb4      0x47a P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .debug_abbrev  0x0000342e      0x146 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .debug_abbrev  0x00003574      0x15b P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_abbrev  0x000036cf      0x12b P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
 
-.debug_line     0x00000000     0x69e9
+.debug_line     0x00000000     0x6cc2
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x133 E:/IDEs/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_line    0x00000133      0x8fc Sketch.o
- .debug_line    0x00000a2f      0x4c5 src/libraries/Arduino-PID-Library-master/PID_v1.o
- .debug_line    0x00000ef4      0x663 src/libraries/I2Cdev/I2Cdev.o
- .debug_line    0x00001557     0x23e7 src/libraries/MPU6050/MPU6050.o
- .debug_line    0x0000393e      0x4c8 src/libraries/NewPing/NewPing.o
- .debug_line    0x00003e06      0x51e src/libraries/Wire/src/utility/twi.o
- .debug_line    0x00004324      0x5e8 src/libraries/Wire/src/Wire.o
- .debug_line    0x0000490c      0x586 src/MPU6050Calib.o
- .debug_line    0x00004e92      0x3f4 src/Motors.o
- .debug_line    0x00005286      0x2c1 src/my_libs/pwm_basic.o
- .debug_line    0x00005547      0x41b p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_line    0x00005962      0x281 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_line    0x00005be3      0x16a p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
- .debug_line    0x00005d4d      0x67a p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .debug_line    0x000063c7      0x298 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .debug_line    0x0000665f      0x257 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_line    0x000068b6      0x133 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .debug_line    0x00000133      0x9a9 Sketch.o
+ .debug_line    0x00000adc      0x4c5 src/libraries/Arduino-PID-Library-master/PID_v1.o
+ .debug_line    0x00000fa1      0x663 src/libraries/I2Cdev/I2Cdev.o
+ .debug_line    0x00001604     0x23e7 src/libraries/MPU6050/MPU6050.o
+ .debug_line    0x000039eb      0x4c8 src/libraries/NewPing/NewPing.o
+ .debug_line    0x00003eb3      0x51e src/libraries/Wire/src/utility/twi.o
+ .debug_line    0x000043d1      0x5e8 src/libraries/Wire/src/Wire.o
+ .debug_line    0x000049b9      0x586 src/MPU6050Calib.o
+ .debug_line    0x00004f3f      0x22d src/my_libs/ENC_lib.o
+ .debug_line    0x0000516c      0x2e4 src/my_libs/MOT_lib.o
+ .debug_line    0x00005450      0x2c1 src/my_libs/pwm_basic.o
+ .debug_line    0x00005711      0x41b P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_line    0x00005b2c      0x281 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_line    0x00005dad      0x16a P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .debug_line    0x00005f17      0x10f P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .debug_line    0x00006026      0x67a P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .debug_line    0x000066a0      0x298 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .debug_line    0x00006938      0x257 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_line    0x00006b8f      0x133 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
 
-.debug_frame    0x00000000     0x39bc
+.debug_frame    0x00000000     0x3a10
  *(.debug_frame)
- .debug_frame   0x00000000      0x254 Sketch.o
- .debug_frame   0x00000254      0x364 src/libraries/Arduino-PID-Library-master/PID_v1.o
- .debug_frame   0x000005b8      0x3bc src/libraries/I2Cdev/I2Cdev.o
- .debug_frame   0x00000974     0x1eac src/libraries/MPU6050/MPU6050.o
- .debug_frame   0x00002820      0x244 src/libraries/NewPing/NewPing.o
- .debug_frame   0x00002a64      0x134 src/libraries/Wire/src/utility/twi.o
- .debug_frame   0x00002b98      0x284 src/libraries/Wire/src/Wire.o
- .debug_frame   0x00002e1c       0xc8 src/MPU6050Calib.o
- .debug_frame   0x00002ee4      0x160 src/Motors.o
+ .debug_frame   0x00000000      0x240 Sketch.o
+ .debug_frame   0x00000240      0x364 src/libraries/Arduino-PID-Library-master/PID_v1.o
+ .debug_frame   0x000005a4      0x3bc src/libraries/I2Cdev/I2Cdev.o
+ .debug_frame   0x00000960     0x1eac src/libraries/MPU6050/MPU6050.o
+ .debug_frame   0x0000280c      0x244 src/libraries/NewPing/NewPing.o
+ .debug_frame   0x00002a50      0x134 src/libraries/Wire/src/utility/twi.o
+ .debug_frame   0x00002b84      0x284 src/libraries/Wire/src/Wire.o
+ .debug_frame   0x00002e08       0xc8 src/MPU6050Calib.o
+ .debug_frame   0x00002ed0       0xa4 src/my_libs/ENC_lib.o
+ .debug_frame   0x00002f74       0xd0 src/my_libs/MOT_lib.o
  .debug_frame   0x00003044      0x154 src/my_libs/pwm_basic.o
- .debug_frame   0x00003198      0x110 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_frame   0x000032a8       0xe0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_frame   0x00003388       0x54 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
- .debug_frame   0x000033dc      0x3ac p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .debug_frame   0x00003788       0xc4 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .debug_frame   0x0000384c       0x7c p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_frame   0x000038c8       0xf4 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .debug_frame   0x00003198      0x110 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_frame   0x000032a8       0xe0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_frame   0x00003388       0x54 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .debug_frame   0x000033dc       0x54 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .debug_frame   0x00003430      0x3ac P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .debug_frame   0x000037dc       0xc4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .debug_frame   0x000038a0       0x7c P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_frame   0x0000391c       0xf4 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
 
-.debug_str      0x00000000     0x7372
+.debug_str      0x00000000     0x7413
  *(.debug_str)
  .debug_str     0x00000000      0x208 E:/IDEs/AtmelStudio/7.0/Packs/atmel/ATmega_DFP/1.2.150/gcc/dev/atmega328p/avr5/crtatmega328p.o
- .debug_str     0x00000208     0x46cb Sketch.o
-                               0x47a1 (size before relaxing)
- .debug_str     0x000048d3       0xb1 src/libraries/Arduino-PID-Library-master/PID_v1.o
+ .debug_str     0x00000208     0x46ef Sketch.o
+                               0x47c5 (size before relaxing)
+ .debug_str     0x000048f7       0xb1 src/libraries/Arduino-PID-Library-master/PID_v1.o
                                 0x5a5 (size before relaxing)
- .debug_str     0x00004984      0x3b3 src/libraries/I2Cdev/I2Cdev.o
+ .debug_str     0x000049a8      0x3b3 src/libraries/I2Cdev/I2Cdev.o
                                 0x687 (size before relaxing)
- .debug_str     0x00004d37      0x16b src/libraries/MPU6050/MPU6050.o
+ .debug_str     0x00004d5b      0x16b src/libraries/MPU6050/MPU6050.o
                                0x3fc7 (size before relaxing)
- .debug_str     0x00004ea2      0x121 src/libraries/NewPing/NewPing.o
+ .debug_str     0x00004ec6      0x121 src/libraries/NewPing/NewPing.o
                                 0x6d1 (size before relaxing)
- .debug_str     0x00004fc3      0x2be src/libraries/Wire/src/utility/twi.o
+ .debug_str     0x00004fe7      0x2be src/libraries/Wire/src/utility/twi.o
                                 0x3d9 (size before relaxing)
- .debug_str     0x00005281     0x13cc src/libraries/Wire/src/Wire.o
+ .debug_str     0x000052a5     0x13cc src/libraries/Wire/src/Wire.o
                                0x18d0 (size before relaxing)
- .debug_str     0x0000664d      0x1a6 src/MPU6050Calib.o
+ .debug_str     0x00006671      0x1a6 src/MPU6050Calib.o
                                0x3f1f (size before relaxing)
- .debug_str     0x000067f3      0x275 src/Motors.o
-                                0x560 (size before relaxing)
- .debug_str     0x00006a68       0x8a src/my_libs/pwm_basic.o
+ .debug_str     0x00006817       0x97 src/my_libs/ENC_lib.o
+                                0x326 (size before relaxing)
+ .debug_str     0x000068ae      0x202 src/my_libs/MOT_lib.o
+                                0x4bb (size before relaxing)
+ .debug_str     0x00006ab0       0x8a src/my_libs/pwm_basic.o
                                 0x380 (size before relaxing)
- .debug_str     0x00006af2      0x39f p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_str     0x00006b3a      0x39f P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
                                0x15f7 (size before relaxing)
- .debug_str     0x00006e91       0x47 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_str     0x00006ed9       0x47 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
                                0x1413 (size before relaxing)
- .debug_str     0x00006ed8       0x37 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .debug_str     0x00006f20       0x37 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
                                 0x2bf (size before relaxing)
- .debug_str     0x00006f0f      0x2ff p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .debug_str     0x00006f57       0x44 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+                                0x1d5 (size before relaxing)
+ .debug_str     0x00006f9b      0x314 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
                                0x124d (size before relaxing)
- .debug_str     0x0000720e       0x66 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .debug_str     0x000072af       0x66 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
                                 0x255 (size before relaxing)
- .debug_str     0x00007274       0x52 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_str     0x00007315       0x52 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
                                 0x2ba (size before relaxing)
- .debug_str     0x000072c6       0xac p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .debug_str     0x00007367       0xac P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
                                 0x258 (size before relaxing)
 
-.debug_loc      0x00000000    0x11111
+.debug_loc      0x00000000    0x11129
  *(.debug_loc)
- .debug_loc     0x00000000      0x799 Sketch.o
- .debug_loc     0x00000799     0x109d src/libraries/Arduino-PID-Library-master/PID_v1.o
- .debug_loc     0x00001836     0x166b src/libraries/I2Cdev/I2Cdev.o
- .debug_loc     0x00002ea1     0x906e src/libraries/MPU6050/MPU6050.o
- .debug_loc     0x0000bf0f      0xba0 src/libraries/NewPing/NewPing.o
- .debug_loc     0x0000caaf      0x3e6 src/libraries/Wire/src/utility/twi.o
- .debug_loc     0x0000ce95      0xbfd src/libraries/Wire/src/Wire.o
- .debug_loc     0x0000da92      0x36a src/MPU6050Calib.o
- .debug_loc     0x0000ddfc      0x443 src/Motors.o
- .debug_loc     0x0000e23f      0x482 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_loc     0x0000e6c1      0x1b0 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_loc     0x0000e871     0x1c87 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .debug_loc     0x000104f8      0x247 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .debug_loc     0x0001073f      0x5fc p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_loc     0x00010d3b      0x3d6 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .debug_loc     0x00000000      0x765 Sketch.o
+ .debug_loc     0x00000765     0x109d src/libraries/Arduino-PID-Library-master/PID_v1.o
+ .debug_loc     0x00001802     0x166b src/libraries/I2Cdev/I2Cdev.o
+ .debug_loc     0x00002e6d     0x906e src/libraries/MPU6050/MPU6050.o
+ .debug_loc     0x0000bedb      0xba0 src/libraries/NewPing/NewPing.o
+ .debug_loc     0x0000ca7b      0x3e6 src/libraries/Wire/src/utility/twi.o
+ .debug_loc     0x0000ce61      0xbfd src/libraries/Wire/src/Wire.o
+ .debug_loc     0x0000da5e      0x36a src/MPU6050Calib.o
+ .debug_loc     0x0000ddc8      0x114 src/my_libs/ENC_lib.o
+ .debug_loc     0x0000dedc      0x32f src/my_libs/MOT_lib.o
+ .debug_loc     0x0000e20b      0x482 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_loc     0x0000e68d      0x1b0 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_loc     0x0000e83d       0x4c P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .debug_loc     0x0000e889     0x1c87 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .debug_loc     0x00010510      0x247 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .debug_loc     0x00010757      0x5fc P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_loc     0x00010d53      0x3d6 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -2714,25 +2760,27 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000      0xff8
+.debug_ranges   0x00000000     0x1020
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x68 Sketch.o
- .debug_ranges  0x00000068       0x80 src/libraries/Arduino-PID-Library-master/PID_v1.o
- .debug_ranges  0x000000e8      0x100 src/libraries/I2Cdev/I2Cdev.o
- .debug_ranges  0x000001e8      0x868 src/libraries/MPU6050/MPU6050.o
- .debug_ranges  0x00000a50       0x90 src/libraries/NewPing/NewPing.o
- .debug_ranges  0x00000ae0       0x70 src/libraries/Wire/src/utility/twi.o
- .debug_ranges  0x00000b50       0xe8 src/libraries/Wire/src/Wire.o
- .debug_ranges  0x00000c38       0x48 src/MPU6050Calib.o
- .debug_ranges  0x00000c80       0x80 src/Motors.o
- .debug_ranges  0x00000d00       0x90 src/my_libs/pwm_basic.o
- .debug_ranges  0x00000d90       0x58 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
- .debug_ranges  0x00000de8       0x38 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
- .debug_ranges  0x00000e20       0x20 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
- .debug_ranges  0x00000e40      0x120 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
- .debug_ranges  0x00000f60       0x38 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
- .debug_ranges  0x00000f98       0x28 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
- .debug_ranges  0x00000fc0       0x38 p:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
+ .debug_ranges  0x00000000       0x70 Sketch.o
+ .debug_ranges  0x00000070       0x80 src/libraries/Arduino-PID-Library-master/PID_v1.o
+ .debug_ranges  0x000000f0      0x100 src/libraries/I2Cdev/I2Cdev.o
+ .debug_ranges  0x000001f0      0x868 src/libraries/MPU6050/MPU6050.o
+ .debug_ranges  0x00000a58       0x90 src/libraries/NewPing/NewPing.o
+ .debug_ranges  0x00000ae8       0x70 src/libraries/Wire/src/utility/twi.o
+ .debug_ranges  0x00000b58       0xe8 src/libraries/Wire/src/Wire.o
+ .debug_ranges  0x00000c40       0x48 src/MPU6050Calib.o
+ .debug_ranges  0x00000c88       0x20 src/my_libs/ENC_lib.o
+ .debug_ranges  0x00000ca8       0x68 src/my_libs/MOT_lib.o
+ .debug_ranges  0x00000d10       0x90 src/my_libs/pwm_basic.o
+ .debug_ranges  0x00000da0       0x58 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial.o)
+ .debug_ranges  0x00000df8       0x38 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(HardwareSerial0.o)
+ .debug_ranges  0x00000e30       0x20 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(main.o)
+ .debug_ranges  0x00000e50       0x18 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(new.o)
+ .debug_ranges  0x00000e68      0x120 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(Print.o)
+ .debug_ranges  0x00000f88       0x38 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring.o)
+ .debug_ranges  0x00000fc0       0x28 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(wiring_digital.o)
+ .debug_ranges  0x00000fe8       0x38 P:\robot_mini\Arduino2Wheeler\ArduGirobot_AtmelStudio\ArduGirobot_AtmelStudio\ArduinoCore\Debug\libArduinoCore.a(WMath.o)
 
 .debug_macro
  *(.debug_macro)

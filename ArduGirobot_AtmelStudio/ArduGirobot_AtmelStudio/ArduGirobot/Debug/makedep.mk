@@ -18,7 +18,9 @@ src\libraries\Wire\src\Wire.cpp
 
 src\MPU6050Calib.cpp
 
-src\Motors.cpp
+src\my_libs\ENC_lib.cpp
+
+src\my_libs\MOT_lib.cpp
 
 src\my_libs\pwm_basic.c
 

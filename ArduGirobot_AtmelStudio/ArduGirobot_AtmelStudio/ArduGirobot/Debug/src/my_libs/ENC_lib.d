@@ -1,5 +1,5 @@
-src/Motors.d src/Motors.o: ../src/Motors.cpp ../include/Motors.h \
- ..\\..\ArduinoCore\include\core/Arduino.h \
+src/my_libs/ENC_lib.d src/my_libs/ENC_lib.o: ../src/my_libs/ENC_lib.cpp \
+ ../include/my_libs/ENC_lib.h ..\\..\ArduinoCore\include\core/Arduino.h \
  e:\ides\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\stdlib.h \
  e:\ides\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stddef.h \
  e:\ides\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\lib\gcc\avr\5.4.0\include\stdbool.h \
@@ -35,9 +35,9 @@ src/Motors.d src/Motors.o: ../src/Motors.cpp ../include/Motors.h \
  ..\\..\ArduinoCore\include\core/Arduino.h \
  ..\\..\ArduinoCore\include\variants\eightanaloginputs/pins_arduino.h \
  ..\\..\ArduinoCore\include\variants\eightanaloginputs/../standard/pins_arduino.h \
- ../include/my_libs/pwm_basic.h ..\\..\ArduinoCore\include\core/arduino.h
+ ../include/Configs.h
 
-../include/Motors.h:
+../include/my_libs/ENC_lib.h:
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -111,6 +111,4 @@ e:\ides\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay
 
 ..\\..\ArduinoCore\include\variants\eightanaloginputs/../standard/pins_arduino.h:
 
-../include/my_libs/pwm_basic.h:
-
-..\\..\ArduinoCore\include\core/arduino.h:
+../include/Configs.h:

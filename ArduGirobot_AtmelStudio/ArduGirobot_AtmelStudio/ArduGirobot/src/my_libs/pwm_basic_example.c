@@ -52,10 +52,10 @@ volatile PWM_0_register_t PWM_0_duty;
 
 void PWM_0_pwm_handler_cb(void)
 {
-	PWM_0_duty++;
-	// Output duty cycle on PWM CH0
-	PWM_0_load_duty_cycle_ch0(PWM_0_duty);
-	PWM_0_isr_executed_counter++;
+    PWM_0_duty++;
+    // Output duty cycle on PWM CH0
+    PWM_0_load_duty_cycle_ch0(PWM_0_duty);
+    PWM_0_isr_executed_counter++;
 }
 
 volatile uint16_t         PWM_1_isr_executed_counter = 0;
@@ -63,58 +63,58 @@ volatile PWM_1_register_t PWM_1_duty;
 
 void PWM_1_pwm_handler_cb(void)
 {
-	PWM_1_duty++;
-	// Output duty cycle on PWM CH0
-	PWM_1_load_duty_cycle_ch0(PWM_1_duty);
-	PWM_1_isr_executed_counter++;
+    PWM_1_duty++;
+    // Output duty cycle on PWM CH0
+    PWM_1_load_duty_cycle_ch0(PWM_1_duty);
+    PWM_1_isr_executed_counter++;
 }
 
 uint8_t PWM_0_test_pwm_basic(void)
 {
 
-	// Enable pin output
-	PWM_0_enable_output_ch0();
+    // Enable pin output
+    PWM_0_enable_output_ch0();
 
-	// Set channel 0 duty cycle value register value to specified value
-	PWM_0_load_duty_cycle_ch0(0x3f);
+    // Set channel 0 duty cycle value register value to specified value
+    PWM_0_load_duty_cycle_ch0(0x3f);
 
-	// Set counter register value
-	PWM_0_load_counter(0);
+    // Set counter register value
+    PWM_0_load_counter(0);
 
-	// Test IRQ mode
+    // Test IRQ mode
 
-	sei();
+    sei();
 
-	PWM_0_register_callback(PWM_0_pwm_handler_cb);
+    PWM_0_register_callback(PWM_0_pwm_handler_cb);
 
-	// Wait for ISR to be executed 65000 times
-	while (PWM_0_isr_executed_counter < 65000)
-		;
+    // Wait for ISR to be executed 65000 times
+    while (PWM_0_isr_executed_counter < 65000)
+        ;
 
-	return 1;
+    return 1;
 }
 
 uint8_t PWM_1_test_pwm_basic(void)
 {
 
-	// Enable pin output
-	PWM_1_enable_output_ch0();
+    // Enable pin output
+    PWM_1_enable_output_ch0();
 
-	// Set channel 0 duty cycle value register value to specified value
-	PWM_1_load_duty_cycle_ch0(0x3f);
+    // Set channel 0 duty cycle value register value to specified value
+    PWM_1_load_duty_cycle_ch0(0x3f);
 
-	// Set counter register value
-	PWM_1_load_counter(0);
+    // Set counter register value
+    PWM_1_load_counter(0);
 
-	// Test IRQ mode
+    // Test IRQ mode
 
-	sei();
+    sei();
 
-	PWM_1_register_callback(PWM_1_pwm_handler_cb);
+    PWM_1_register_callback(PWM_1_pwm_handler_cb);
 
-	// Wait for ISR to be executed 65000 times
-	while (PWM_1_isr_executed_counter < 65000)
-		;
+    // Wait for ISR to be executed 65000 times
+    while (PWM_1_isr_executed_counter < 65000)
+        ;
 
-	return 1;
+    return 1;
 }

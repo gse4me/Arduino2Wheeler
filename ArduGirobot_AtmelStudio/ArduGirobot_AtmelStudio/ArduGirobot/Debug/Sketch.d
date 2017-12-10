@@ -38,9 +38,11 @@ Sketch.d Sketch.o: .././Sketch.cpp \
  ..\include\libraries\MPU6050/MPU6050.h \
  ..\include\libraries\I2Cdev/I2Cdev.h \
  ..\include\libraries\Wire\src/Wire.h \
- ..\\..\ArduinoCore\include\core/Stream.h ../include/Motors.h \
+ ..\\..\ArduinoCore\include\core/Stream.h ../include/my_libs/MOT_lib.h \
+ ../include/Configs.h ../include/my_libs/ENC_lib.h \
  ..\include\libraries\NewPing/NewPing.h ../include/MPU6050Calib.h \
- ..\include\libraries\Arduino-PID-Library-master/PID_v1.h .././Configs.h
+ ..\include\libraries\Arduino-PID-Library-master/PID_v1.h \
+ ../include/Utils.h
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -122,7 +124,11 @@ e:\ides\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay
 
 ..\\..\ArduinoCore\include\core/Stream.h:
 
-../include/Motors.h:
+../include/my_libs/MOT_lib.h:
+
+../include/Configs.h:
+
+../include/my_libs/ENC_lib.h:
 
 ..\include\libraries\NewPing/NewPing.h:
 
@@ -130,4 +136,4 @@ e:\ides\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay
 
 ..\include\libraries\Arduino-PID-Library-master/PID_v1.h:
 
-.././Configs.h:
+../include/Utils.h:
