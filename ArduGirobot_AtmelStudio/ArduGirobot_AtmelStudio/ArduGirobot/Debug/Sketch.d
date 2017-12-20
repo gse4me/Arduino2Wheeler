@@ -42,7 +42,7 @@ Sketch.d Sketch.o: .././Sketch.cpp \
  ../include/Configs.h ../include/my_libs/ENC_lib.h \
  ..\include\libraries\NewPing/NewPing.h ../include/MPU6050Calib.h \
  ..\include\libraries\Arduino-PID-Library-master/PID_v1.h \
- ../include/Utils.h
+ ../include/Utils.h ..\include\libraries\EEPROM\src/EEPROM.h
 
 ..\\..\ArduinoCore\include\core/Arduino.h:
 
@@ -137,3 +137,5 @@ e:\ides\atmelstudio\7.0\toolchain\avr8\avr8-gnu-toolchain\avr\include\util\delay
 ..\include\libraries\Arduino-PID-Library-master/PID_v1.h:
 
 ../include/Utils.h:
+
+..\include\libraries\EEPROM\src/EEPROM.h:

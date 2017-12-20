@@ -29,11 +29,15 @@ int distanceCm;
 unsigned long previousMilliEnc = 0;
 unsigned long previousMilliSerialLog = 0;
 const long intervalEnc = PID__MOTOR_SAMPLE_TIME;
-const long intervalSerialLog = 100;
+
 
 bool running=false;
 
-
+bool ConnectGiroToMot=true;
+bool PrintPidCfgValues=true;
+bool PrintP1CfgValues=true;
+bool PrintP2CfgValues=true;
+bool PrintP3CfgValues=true;
 
 
 PIDConfig_e *Mot0_PidCtl;
@@ -44,10 +48,39 @@ PID *Mot0_Pid;
 PID *Mot1_Pid;
 PID *Giro_Pid;
 
+
+void getPidConfigsFromEEPROM() {
+    uint16_t addr=EEPROM_PID_CONFIGS_ADDR;
+
+    ReadPidCfgFromEEPROM(addr,Mot0_PidCtl);
+    addr+=3*sizeof(double);
+    ReadPidCfgFromEEPROM(addr,Mot1_PidCtl);
+    addr+=3*sizeof(double);
+    ReadPidCfgFromEEPROM(addr,Giro_PidCtl);
+}
+
+
+void putPidConfigToEEPROM() {
+
+    uint16_t addr=EEPROM_PID_CONFIGS_ADDR;
+
+    WritePidCfgToEEPROM(addr,Mot0_PidCtl);
+    addr+=3*sizeof(double);
+    WritePidCfgToEEPROM(addr,Mot1_PidCtl);
+    addr+=3*sizeof(double);
+    WritePidCfgToEEPROM(addr,Giro_PidCtl);
+}
+
+
+// Init the pids for the 2 motors and the giro
 void initPidControls() {
-    Mot0_PidCtl= new PIDConfig_e("M0",MOT0__KP,MOT0__KI,MOT0__KD,0);
-    Mot1_PidCtl= new PIDConfig_e("M1",MOT1__KP,MOT1__KI,MOT1__KD,0);
-    Giro_PidCtl= new PIDConfig_e("Gi",GIRO__KP,GIRO__KI,GIRO__KD,GIRO__TARGET_ANGLE);
+    Mot0_PidCtl= new PIDConfig_e(MOT0__KP,MOT0__KI,MOT0__KD,0);
+    Mot1_PidCtl= new PIDConfig_e(MOT1__KP,MOT1__KI,MOT1__KD,0);
+    Giro_PidCtl= new PIDConfig_e(GIRO__KP,GIRO__KI,GIRO__KD,GIRO__TARGET_ANGLE);
+
+#ifdef LOAD_PIDS_FROM_EEPROM
+    getPidConfigsFromEEPROM();
+#endif
 
     Mot0_Pid= new PID(&Mot0_PidCtl->Input, &Mot0_PidCtl->Output, &Mot0_PidCtl->Setpoint, Mot0_PidCtl->Kp, Mot0_PidCtl->Ki, Mot0_PidCtl->Kd, P_ON_E, DIRECT);
     Mot1_Pid= new PID(&Mot1_PidCtl->Input, &Mot1_PidCtl->Output, &Mot1_PidCtl->Setpoint, Mot1_PidCtl->Kp, Mot1_PidCtl->Ki, Mot1_PidCtl->Kd, P_ON_E, DIRECT);
@@ -66,70 +99,144 @@ void initPidControls() {
     Giro_Pid->SetMode(AUTOMATIC);
 
 }
-/*
 
 
-->SP M0/M1/Gi Kp Kd Ki
-
-->GD M0/M1/Gi
-<-DD: M0/M1/Gi Kp Kd Ki Setpoint
-
-->SS M0/M1/M2 Setpoint
-
-<-ENC: M0val M0dir M1val M2dir
-
-*/
 
 
-void PrintPidCfg(PIDConfig_e *cfg) {
-    Serial.print("DD: ");
-    Serial.print(cfg->Name);
-    Serial.print(" ");
-    Serial.print(cfg->Kp);
-    Serial.print(" ");
-    Serial.print(cfg->Ki);
-    Serial.print(" ");
-    Serial.print(cfg->Kd);
-    Serial.print(" ");
-    Serial.print(cfg->Setpoint);
-    Serial.println(" ");
+//Log each interesting value for the cpu app; each call will print a single value
+void printData() {
+    static uint8_t i=ARD_START_PRINT_IDX;
+    static uint8_t old_i=ARD_START_PRINT_IDX;
+
+
+    if (Serial.availableForWrite()<6) {
+        return;
+    }
+
+    old_i=i;
+    //////////////////////////////////
+    if (PrintP1CfgValues==true) {
+        switch(i) {
+        case ARD_PID1_INPUT:
+            Serial.write(i++);
+            Serial.println(Mot0_PidCtl->Input);
+            break;
+        case ARD_PID1_OUTPUT:
+            Serial.write(i++);
+            Serial.println(Mot0_PidCtl->Output);
+            break;
+        case ARD_PID1_SETPOINT:
+            Serial.write(i);
+            Serial.println(Mot0_PidCtl->Setpoint);
+            i=ARD_START_PRINT_IDX;
+            break;
+        }
+    }
+
+    if (PrintP2CfgValues==true) {
+        if (i==ARD_START_PRINT_IDX) {
+            i=ARD_PID2_INPUT;
+            return;
+        }
+
+        switch(i) {
+        case ARD_PID2_INPUT:
+            Serial.write(i++);
+            Serial.println(Mot1_PidCtl->Input);
+            break;
+        case ARD_PID2_OUTPUT:
+            Serial.write(i++);
+            Serial.println(Mot1_PidCtl->Output);
+            break;
+        case ARD_PID2_SETPOINT:
+            Serial.write(i);
+            Serial.println(Mot1_PidCtl->Setpoint);
+            i=ARD_START_PRINT_IDX;
+            break;
+        }
+    }
+
+    if (PrintP3CfgValues==true) {
+
+        if (i==ARD_START_PRINT_IDX) {
+            i=ARD_PID3_INPUT;
+            return;
+        }
+
+        switch(i) {
+        case ARD_PID3_INPUT:
+            Serial.write(i++);
+            Serial.println(Giro_PidCtl->Input);
+            break;
+        case ARD_PID3_OUTPUT:
+            Serial.write(i++);
+            Serial.println(Giro_PidCtl->Output);
+            break;
+        case ARD_PID3_SETPOINT:
+            Serial.write(i);
+            Serial.println(Giro_PidCtl->Setpoint);
+            i=ARD_START_PRINT_IDX; //go to pid cfg
+            break;
+        }
+    }
+
+    if (PrintPidCfgValues==true) {
+        if (i==ARD_START_PRINT_IDX) {
+            i=ARD_PID1_KP;
+            return;
+        }
+
+        switch(i) {
+        case ARD_PID1_KP:
+            Serial.write(i++);
+            Serial.println(Mot0_PidCtl->Kp);
+            break;
+        case ARD_PID1_KI:
+            Serial.write(i++);
+            Serial.println(Mot0_PidCtl->Ki);
+            break;
+        case ARD_PID1_KD:
+            Serial.write(i++);
+            Serial.println(Mot0_PidCtl->Kd);
+            break;
+        case ARD_PID2_KP:
+            Serial.write(i++);
+            Serial.println(Mot1_PidCtl->Kp);
+            break;
+        case ARD_PID2_KI:
+            Serial.write(i++);
+            Serial.println(Mot1_PidCtl->Ki);
+            break;
+        case ARD_PID2_KD:
+            Serial.write(i++);
+            Serial.println(Mot1_PidCtl->Kd);
+            break;
+        case ARD_PID3_KP:
+            Serial.write(i++);
+            Serial.println(Giro_PidCtl->Kp);
+            break;
+        case ARD_PID3_KI:
+            Serial.write(i++);
+            Serial.println(Giro_PidCtl->Ki);
+            break;
+        case ARD_PID3_KD:
+            Serial.write(i);
+            Serial.println(Giro_PidCtl->Kd);
+            i=ARD_START_PRINT_IDX; //go to start
+            PrintPidCfgValues=false; // don't print them again unless requested
+            break;
+        }
+    }
+    if (old_i==i) { // if we get stuck (something gets set to false
+        i=ARD_START_PRINT_IDX;
+    }
 }
-
-void PrintEncoderValues() {
-    Serial.print("ENC: ");
-    Serial.print(Mot0_PidCtl->Input);
-    (Mot0_Dir==0xFFFF)?Serial.print(" 1 "):Serial.print(" 0 ");
-
-    Serial.print(Mot1_PidCtl->Input);
-    (Mot1_Dir==0xFFFF)?Serial.print(" 1 "):Serial.print(" 0 ");
-    Serial.println(" ");
-}
-
-void PrintPidOutputValues() {
-    Serial.print("PID: ");
-    Serial.print(Mot0_PidCtl->Output);
-
-    Serial.print(" ");
-    Serial.print(Mot1_PidCtl->Output);
-
-    Serial.println(" ");
-
-    Serial.print("SET: ");
-    Serial.print(Mot0_PidCtl->Setpoint);
-
-    Serial.print(" ");
-    Serial.print(Mot1_PidCtl->Setpoint);
-
-    Serial.println(" ");
-}
-
 
 
 
 const char Ser_EndMarker = '\n';
 char Ser_Buffer[SERIAL__MY_BUF_SIZE]; // an array to store the received data
 boolean Ser_NewData = false;
-
 void Ser_ReceiveData() {
     static byte ndx = 0;
     char rc;
@@ -155,14 +262,6 @@ void Ser_ReceiveData() {
 
 
 
-PIDConfig_e *CfgPtr=NULL;
-PID *PidPtr=NULL;
-
-bool connectGiroToMot=true;
-bool printRawGiro=false;
-bool printMotPid=false;
-bool printGiroPid=false;
-
 
 bool DirUp=false;
 bool DirDn=false;
@@ -171,103 +270,97 @@ bool DirLeft=false;
 
 uint16_t RemoteCmd=0;
 unsigned long RemoteCmdRecTime=0;
-void Ser_ParseData() {
+
+void Serial_ParseData() {
     if (Ser_NewData==false) return;
 
-    char *pch;
-
-    pch=strtok(Ser_Buffer, " ");
-    if (strcmp(pch,"C:")==0) {
-        pch=strtok(NULL, " ");
-        RemoteCmd=atoi(pch);
-        RemoteCmdRecTime=millis();
-        //  Serial.println(RemoteCmd);
-    } else if(strcmp(pch,"SP")==0) { //Set Pid
-        Serial.println("Debug: SP Start");
-
-        pch=strtok(NULL, " ");
-        if(strcmp(pch,"M0")==0) {
-            CfgPtr = Mot0_PidCtl;
-            PidPtr = Mot0_Pid;
-        } else if(strcmp(pch,"M1")==0) {
-            CfgPtr = Mot1_PidCtl;
-            PidPtr = Mot1_Pid;
-        } else if(strcmp(pch,"Gi")==0) {
-            CfgPtr = Giro_PidCtl;
-            PidPtr =  Giro_Pid;
-        }
-
-        pch=strtok(NULL, " ");
-        CfgPtr->Kp=atof(pch);
-
-        pch=strtok(NULL, " ");
-        CfgPtr->Ki=atof(pch);
-
-        pch=strtok(NULL, " ");
-        CfgPtr->Kd=atof(pch);
-
-        PidPtr->SetTunings(CfgPtr->Kp,CfgPtr->Ki,CfgPtr->Kd);
-
-        Serial.println("Debug: SP Done");
-    } else  if(strcmp(pch,"GD")==0) { //Get Pid Data
-        Serial.println("Debug: GD Start");
-
-        pch=strtok(NULL, " ");
-
-        if(strcmp(pch,"M0")==0) {
-            CfgPtr = Mot0_PidCtl;
-        } else if(strcmp(pch,"M1")==0) {
-            CfgPtr = Mot1_PidCtl;
-        } else if(strcmp(pch,"Gi")==0) {
-            CfgPtr = Giro_PidCtl;
-        }
-
-        PrintPidCfg(CfgPtr);
-
-        Serial.println("Debug: GD Done");
-    } else if(strcmp(pch,"SS")==0) { //Set  setpoint
-        Serial.println("Debug: SS Start");
-        pch=strtok(NULL, " ");
-
-        if(strcmp(pch,"M0")==0) {
-            CfgPtr = Mot0_PidCtl;
-            PidPtr = Mot0_Pid;
-        } else if(strcmp(pch,"M1")==0) {
-            CfgPtr = Mot1_PidCtl;
-            PidPtr = Mot0_Pid;
-        } else if(strcmp(pch,"Gi")==0) {
-            CfgPtr = Giro_PidCtl;
-            PidPtr = Mot0_Pid;
-        }
-
-        pch=strtok(NULL, " ");
-
-        CfgPtr->Setpoint=atof(pch);
-        Serial.println("Debug: SS Done");
-
+    uint8_t target=Ser_Buffer[0];
+    char *val=Ser_Buffer+1;
+    double dval;
+    if (val[0]!='\n') {
+        dval=atof(val);
     }
 
-    else if (strcmp(pch,"GC_ON")==0) {
-        connectGiroToMot=true;
-    } else if (strcmp(pch,"GC_OFF")==0) {
-        connectGiroToMot=false;
-        Mot0_PidCtl->Setpoint=0;
-        Mot1_PidCtl->Setpoint=0;
-    } else if (strcmp(pch,"GRP_ON")==0) {
-        printRawGiro=true;
-    } else if (strcmp(pch,"GRP_OFF")==0) {
-        printRawGiro=false;
-    } else if (strcmp(pch,"MP_ON")==0) {
-        printMotPid=true;
-    } else if (strcmp(pch,"MP_OFF")==0) {
-        printMotPid=false;
-    } else if (strcmp(pch,"GP_ON")==0) {
-        printGiroPid=true;
-    } else if (strcmp(pch,"GP_OFF")==0) {
-        printGiroPid=false;
+    switch(target) {
+    case CUTE_PID1_KP:
+        Mot0_PidCtl->Kp=dval;
+        Mot0_Pid->SetTunings(Mot0_PidCtl->Kp,Mot0_PidCtl->Ki,Mot0_PidCtl->Kd);
+        break;
+    case CUTE_PID1_KI:
+        Mot0_PidCtl->Ki=dval;
+        Mot0_Pid->SetTunings(Mot0_PidCtl->Kp,Mot0_PidCtl->Ki,Mot0_PidCtl->Kd);
+        break;
+    case CUTE_PID1_KD:
+        Mot0_PidCtl->Kd=dval;
+        Mot0_Pid->SetTunings(Mot0_PidCtl->Kp,Mot0_PidCtl->Ki,Mot0_PidCtl->Kd);
+        break;
+    case CUTE_PID2_KP:
+        Mot1_PidCtl->Kp=dval;
+        Mot1_Pid->SetTunings(Mot1_PidCtl->Kp,Mot1_PidCtl->Ki,Mot1_PidCtl->Kd);
+        break;
+    case CUTE_PID2_KI:
+        Mot1_PidCtl->Ki=dval;
+        Mot1_Pid->SetTunings(Mot1_PidCtl->Kp,Mot1_PidCtl->Ki,Mot1_PidCtl->Kd);
+        break;
+    case CUTE_PID2_KD:
+        Mot1_PidCtl->Kd=dval;
+        Mot1_Pid->SetTunings(Mot1_PidCtl->Kp,Mot1_PidCtl->Ki,Mot1_PidCtl->Kd);
+        break;
+    case CUTE_PID3_KP:
+        Giro_PidCtl->Kp=dval;
+        Giro_Pid->SetTunings(Giro_PidCtl->Kp,Giro_PidCtl->Ki,Giro_PidCtl->Kd);
+        break;
+    case CUTE_PID3_KI:
+        Giro_PidCtl->Ki=dval;
+        Giro_Pid->SetTunings(Giro_PidCtl->Kp,Giro_PidCtl->Ki,Giro_PidCtl->Kd);
+        break;
+    case CUTE_PID3_KD:
+        Giro_PidCtl->Kd=dval;
+        Giro_Pid->SetTunings(Giro_PidCtl->Kp,Giro_PidCtl->Ki,Giro_PidCtl->Kd);
+        break;
+    case CUTE_PID1_SETP:
+        Mot0_PidCtl->Setpoint=dval;
+        break;
+    case CUTE_PID2_SETP:
+        Mot1_PidCtl->Setpoint=dval;
+        break;
+    case CUTE_PID3_SETP:
+        Giro_PidCtl->Setpoint=dval;
+        break;
+    case CUTE_P1_PRNT_ON:
+        PrintP1CfgValues=true;
+        break;
+    case CUTE_P1_PRNT_OFF:
+        PrintP1CfgValues=false;
+        break;
+    case CUTE_P2_PRNT_ON:
+        PrintP2CfgValues=true;
+        break;
+    case CUTE_P2_PRNT_OFF:
+        PrintP2CfgValues=false;
+        break;
+    case CUTE_P3_PRNT_ON:
+        PrintP3CfgValues=true;
+        break;
+    case CUTE_P3_PRNT_OFF:
+        PrintP3CfgValues=false;
+        break;
+    case CUTE_GIRO_TO_MOT_ON:
+        ConnectGiroToMot=true;
+        break;
+    case CUTE_GIRO_TO_MOT_OFF:
+        ConnectGiroToMot=false;
+        break;
+    case CUTE_GET_ALL_PID_CFGS:
+        PrintPidCfgValues=true;
+        break;
+    case CUTE_SAVE_TO_EEPROM:
+        putPidConfigToEEPROM();
+        break;
+    default:
+        break;
+
     }
-
-
 
     Ser_NewData=false;
 }
@@ -311,32 +404,11 @@ void Giro_ReadData() {
 
 }
 
-void PrintGiroRawData() {
-    Serial.print("GRD: ");
-    Serial.print(Giro_AccY);
-    Serial.print(" ");
-    Serial.print(Giro_AccZ);
-    Serial.print(" ");
-    Serial.print(Giro_RotX);
-
-    Serial.println(" ");
-}
-
-void PrintGiroInputOutputValues() {
-    Serial.print("GIO: ");
-    Serial.print(Giro_PidCtl->Input);
-    Serial.print(" ");
-    Serial.print(Giro_PidCtl->Output);
-
-    Serial.println(" ");
-}
-
-
 
 
 void setup() {
     Serial.begin(SERIAL__BAUD_RATE);
-    Serial.println("Setup:Serial Initialized");
+    LOG("Setup:Serial Initialized");
 
 
     //CalibSetup();
@@ -350,23 +422,31 @@ void setup() {
     mpu.setXGyroOffset(150);
     mpu.setYGyroOffset(-6);
     mpu.setZGyroOffset(19);
-    Serial.println("Setup: Mpu6050 Initialized");
+    LOG("Setup: Mpu6050 Initialized");
 
     Mot0_Init();
     Mot1_Init();
     Motors_SetSpeed(0,0);
-    Serial.println("Setup: Motors Initialized");
+    LOG("Setup: Motors Initialized");
 
     Enc_Init();
-    Serial.println("Setup: Encoders Initialized");
+    LOG("Setup: Encoders Initialized");
 
     initPidControls();
-    PrintPidCfg(Mot0_PidCtl);
-    PrintPidCfg(Mot1_PidCtl);
-    PrintPidCfg(Giro_PidCtl);
-    Serial.println("Setup: Pids initialized");
+    LOG("Setup: PID initialized");
 
-    Serial.println("Setup: Done");
+    LOG("Setup: Done");
+
+
+    Serial.println("Pid config for P1: ");
+    Serial.println("Ki: ");
+    Serial.print(Mot1_PidCtl->Ki);
+    Serial.println("Kp: ");
+    Serial.print(Mot1_PidCtl->Kp);
+    Serial.println("Kd: ");
+    Serial.print(Mot1_PidCtl->Kd);
+    Serial.println("Done!");
+
 }
 
 unsigned long loopTime;
@@ -386,7 +466,7 @@ void loop() {
         UpdateEncoderValues();
     }
 
-//---------------------------- GIRO---------------------------------------------
+    //---------------------------- GIRO---------------------------------------------
 
     Giro_ReadData();
     // Giro_PidCtl->Input+=self_balance_pid_setpoint;
@@ -409,7 +489,7 @@ void loop() {
 
     Giro_Pid->Compute();
 
-// Remote go fwd/bck
+    // Remote go fwd/bck
     if(RemoteCmd & B00000001) {                                           //If the first bit of the receive byte is set change the left and right variable to turn the robot to the left
         Mot0_PidCtl->Input += turning_speed;                                       //Increase the left motor speed
         Mot1_PidCtl->Input -= turning_speed;                                      //Decrease the right motor speed
@@ -426,12 +506,12 @@ void loop() {
         }
     }
 
-    if (connectGiroToMot==true) {
+    if (ConnectGiroToMot==true) {
         Mot0_PidCtl->Setpoint=Giro_PidCtl->Output;
         Mot1_PidCtl->Setpoint=Giro_PidCtl->Output;
     }
 
-//--------------------------- MOTORS --------------------------------------
+    //--------------------------- MOTORS --------------------------------------
     Mot0_Pid->Compute();
     Mot1_Pid->Compute();
 
@@ -447,7 +527,7 @@ void loop() {
 
 
 
-    if((connectGiroToMot==true) &&
+    if((ConnectGiroToMot==true) &&
             ((running==false) ||
              (Giro_PidCtl->Input > 50 || Giro_PidCtl->Input < -50) || //we fell
              ((Giro_PidCtl->Output >1) && (Giro_PidCtl->Output < 1))) //somewhat equilibrium
@@ -467,30 +547,20 @@ void loop() {
 
 
 
-    if (currentMillis - previousMilliSerialLog >= intervalSerialLog) {
+    if (currentMillis - previousMilliSerialLog >= SERIAL_LOG_INTERVAL) {
         previousMilliSerialLog=currentMillis;
 
 
-        if (printRawGiro==true) {
-            PrintGiroRawData();
-        }
-
-        if (printGiroPid==true) {
-            PrintGiroInputOutputValues();
-        }
-
-        if(printMotPid==true) {
-            PrintEncoderValues();
-            PrintPidOutputValues();
-        }
-
         Ser_ReceiveData();
-        Ser_ParseData();
+        Serial_ParseData();
 
         /*   loopTime=micros()-loopTime;
-           Serial.print("MC: ");
-           Serial.println(loopTime);
+        Serial.print("MC: ");
+        Serial.println(loopTime);
         */
+
+        printData();
+
     }
 
 

@@ -85,7 +85,7 @@ uint8_t PWM_0_test_pwm_basic(void)
 
     sei();
 
-    PWM_0_register_callback(PWM_0_pwm_handler_cb);
+    // PWM_0_register_callback(PWM_0_pwm_handler_cb);
 
     // Wait for ISR to be executed 65000 times
     while (PWM_0_isr_executed_counter < 65000)
@@ -110,7 +110,7 @@ uint8_t PWM_1_test_pwm_basic(void)
 
     sei();
 
-    PWM_1_register_callback(PWM_1_pwm_handler_cb);
+    //PWM_1_register_callback(PWM_1_pwm_handler_cb);
 
     // Wait for ISR to be executed 65000 times
     while (PWM_1_isr_executed_counter < 65000)

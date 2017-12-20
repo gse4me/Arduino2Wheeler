@@ -13,6 +13,7 @@
 #define XBEE__BAUD_RATE		 115200
 #define SERIAL__BAUD_RATE	 XBEE__BAUD_RATE
 #define SERIAL__MY_BUF_SIZE  64
+#define SERIAL_LOG_INTERVAL  5
 
 
 //PING
@@ -30,6 +31,9 @@
 
 //PID DEFINES
 #define PID__MOTOR_SAMPLE_TIME 5
+
+#define EEPROM_PID_CONFIGS_ADDR 0
+#define LOAD_PIDS_FROM_EEPROM 1
 
 #ifdef MOT__USE_SLOW_DECAY
 #define MOT0__KP 40
@@ -58,5 +62,68 @@
 
 
 #endif
+
+//------------------------ protocol ---------------//
+#define ARD_START_PRINT_IDX ARD_PID1_INPUT
+//------------------------- RECEIVE COMMANDS ----------------//
+
+#define ARD_LOG             255
+
+#define ARD_PID1_INPUT      1
+#define ARD_PID1_OUTPUT     2
+#define ARD_PID1_SETPOINT   3
+
+#define ARD_PID2_INPUT      4
+#define ARD_PID2_OUTPUT     5
+#define ARD_PID2_SETPOINT   6
+
+#define ARD_PID3_INPUT      7
+#define ARD_PID3_OUTPUT     8
+#define ARD_PID3_SETPOINT   9
+
+//skip 10 -> it's newline
+#define ARD_PID1_KP         11
+#define ARD_PID1_KI         12
+#define ARD_PID1_KD         13
+
+#define ARD_PID2_KP         14
+#define ARD_PID2_KI         15
+#define ARD_PID2_KD         16
+
+#define ARD_PID3_KP         17
+#define ARD_PID3_KI         18
+#define ARD_PID3_KD         19
+
+//------------------------- TRANSMIT COMMANDS ---------------//
+#define CUTE_PID1_KP        1
+#define CUTE_PID1_KI        2
+#define CUTE_PID1_KD        3
+
+#define CUTE_PID2_KP        4
+#define CUTE_PID2_KI        5
+#define CUTE_PID2_KD        6
+
+#define CUTE_PID3_KP        7
+#define CUTE_PID3_KI        8
+#define CUTE_PID3_KD        9
+
+//avoid 10
+#define CUTE_PID1_SETP      11
+#define CUTE_PID2_SETP      12
+#define CUTE_PID3_SETP      13
+
+#define CUTE_P1_PRNT_ON         20
+#define CUTE_P1_PRNT_OFF        21
+#define CUTE_P2_PRNT_ON         22
+#define CUTE_P2_PRNT_OFF        23
+#define CUTE_P3_PRNT_ON         24
+#define CUTE_P3_PRNT_OFF        25
+
+#define CUTE_GIRO_TO_MOT_ON     26
+#define CUTE_GIRO_TO_MOT_OFF    27
+#define CUTE_GET_ALL_PID_CFGS   28
+
+#define CUTE_SAVE_TO_EEPROM		30
+
 
 #endif /* CONFIGS_H_ */
