@@ -169,14 +169,20 @@ bool DirDn=false;
 bool DirRight=false;
 bool DirLeft=false;
 
+uint16_t RemoteCmd=0;
+unsigned long RemoteCmdRecTime=0;
 void Ser_ParseData() {
     if (Ser_NewData==false) return;
 
     char *pch;
 
     pch=strtok(Ser_Buffer, " ");
-
-    if(strcmp(pch,"SP")==0) { //Set Pid
+    if (strcmp(pch,"C:")==0) {
+        pch=strtok(NULL, " ");
+        RemoteCmd=atoi(pch);
+        RemoteCmdRecTime=millis();
+        //  Serial.println(RemoteCmd);
+    } else if(strcmp(pch,"SP")==0) { //Set Pid
         Serial.println("Debug: SP Start");
 
         pch=strtok(NULL, " ");
@@ -261,15 +267,6 @@ void Ser_ParseData() {
         printGiroPid=false;
     }
 
-    else if (strcmp(pch,"XU")==0) {
-        DirUp=true;
-    } else if (strcmp(pch,"XD")==0) {
-        DirDn=true;
-    } else if (strcmp(pch,"XR")==0) {
-        DirRight=true;
-    } else if (strcmp(pch,"XL")==0) {
-        DirLeft=true;
-    }
 
 
     Ser_NewData=false;
@@ -336,6 +333,7 @@ void PrintGiroInputOutputValues() {
 
 
 
+
 void setup() {
     Serial.begin(SERIAL__BAUD_RATE);
     Serial.println("Setup:Serial Initialized");
@@ -375,7 +373,8 @@ unsigned long loopTime;
 
 float self_balance_pid_setpoint=0;
 
-unsigned long dirStart=0;
+
+uint8_t turning_speed=3;
 
 void loop() {
     loopTime=micros();
@@ -388,26 +387,44 @@ void loop() {
     }
 
 //---------------------------- GIRO---------------------------------------------
+
     Giro_ReadData();
-// Remote go fwd/bck
-    if (DirUp==true) {
-        dirStart=millis();
-        Giro_PidCtl->Setpoint+=10;
-        DirUp=false;
-    } else if(DirDn==true) {
-        dirStart=millis();
-        Giro_PidCtl->Setpoint-=10;
-        DirDn=false;
+    // Giro_PidCtl->Input+=self_balance_pid_setpoint;
+
+
+    if(RemoteCmd & B00000100) {                                           //If the third bit of the receive byte is set change the left and right variable to turn the robot to the right
+        if(Giro_PidCtl->Setpoint > GIRO__TARGET_ANGLE - 7) Giro_PidCtl->Setpoint -= 0.1;                            //Slowly change the setpoint angle so the robot starts leaning forewards
+        if(Giro_PidCtl->Output > 20 * -1)Giro_PidCtl->Setpoint -= 0.05;            //Slowly change the setpoint angle so the robot starts leaning forewards
+    }
+    if(RemoteCmd & B00001000) {                                           //If the forth bit of the receive byte is set change the left and right variable to turn the robot to the right
+        if(Giro_PidCtl->Setpoint < GIRO__TARGET_ANGLE + 7) Giro_PidCtl->Setpoint += 0.1;                             //Slowly change the setpoint angle so the robot starts leaning backwards
+        if(Giro_PidCtl->Output < 20) Giro_PidCtl->Setpoint += 0.05;                 //Slowly change the setpoint angle so the robot starts leaning backwards
     }
 
-    if (millis()-dirStart>1500) {
-        dirStart=0;
-        Giro_PidCtl->Setpoint=GIRO__TARGET_ANGLE;
+    if(!(RemoteCmd & B00001100)) {                                        //Slowly reduce the setpoint to zero if no foreward or backward command is given
+        if(Giro_PidCtl->Setpoint > 0.5)Giro_PidCtl->Setpoint -=0.05;                              //If the PID setpoint is larger then 0.5 reduce the setpoint with 0.05 every loop
+        else if(Giro_PidCtl->Setpoint < -0.5)Giro_PidCtl->Setpoint +=0.05;                        //If the PID setpoint is smaller then -0.5 increase the setpoint with 0.05 every loop
+        else Giro_PidCtl->Setpoint = GIRO__TARGET_ANGLE;                                                  //If the PID setpoint is smaller then 0.5 or larger then -0.5 set the setpoint to 0
     }
 
-
-    Giro_PidCtl->Input+=self_balance_pid_setpoint;
     Giro_Pid->Compute();
+
+// Remote go fwd/bck
+    if(RemoteCmd & B00000001) {                                           //If the first bit of the receive byte is set change the left and right variable to turn the robot to the left
+        Mot0_PidCtl->Input += turning_speed;                                       //Increase the left motor speed
+        Mot1_PidCtl->Input -= turning_speed;                                      //Decrease the right motor speed
+    }
+    if(RemoteCmd & B00000010) {                                           //If the second bit of the receive byte is set change the left and right variable to turn the robot to the right
+        Mot0_PidCtl->Input -= turning_speed;                                       //Decrease the left motor speed
+        Mot1_PidCtl->Input += turning_speed;                                      //Increase the right motor speed
+    }
+
+
+    if (RemoteCmd ) {
+        if(millis()-RemoteCmdRecTime >=40) {
+            RemoteCmd=0;
+        }
+    }
 
     if (connectGiroToMot==true) {
         Mot0_PidCtl->Setpoint=Giro_PidCtl->Output;
@@ -452,6 +469,7 @@ void loop() {
 
     if (currentMillis - previousMilliSerialLog >= intervalSerialLog) {
         previousMilliSerialLog=currentMillis;
+
 
         if (printRawGiro==true) {
             PrintGiroRawData();
