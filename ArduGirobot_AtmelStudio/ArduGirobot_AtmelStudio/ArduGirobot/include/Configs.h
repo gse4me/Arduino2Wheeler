@@ -24,13 +24,12 @@
 //MOTOR DEFINES
 #define MOT__USE_SLOW_DECAY     //motor drive type 
 
-//ENCODER DEFINES
-#define ENC__USE_DOUBLE_INT    //use 2 interrupts or 1 per encoder
-
-
 
 //PID DEFINES
 #define PID__MOTOR_SAMPLE_TIME 5
+//ENCODER DEFINES
+#define ENC__USE_DOUBLE_INT    //use 2 interrupts or 1 per encoder
+#define ENC__SAMPLE_TIME  PID__MOTOR_SAMPLE_TIME
 
 #define EEPROM_PID_CONFIGS_ADDR 0
 #define LOAD_PIDS_FROM_EEPROM 1

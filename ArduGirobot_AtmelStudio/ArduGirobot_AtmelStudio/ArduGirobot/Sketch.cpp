@@ -13,33 +13,49 @@
 
 
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
-MPU6050 mpu;
 
 
 
 
-int16_t Giro_AccY, Giro_AccZ, Giro_RotX;
-volatile int motorPower, Giro_Rate;
-volatile float Giro_AccAngle, Giro_Angle, Giro_FilteredAngle, Giro_PrevAngle=0, error, prevError=0, errorSum=0;
-volatile byte count=0;
+bool DirUp=false;
+bool DirDn=false;
+bool DirRight=false;
+bool DirLeft=false;
+
+uint16_t RemoteCmd=0;
+unsigned long RemoteCmdRecTime=0;
+
+
+
 int distanceCm;
 
+unsigned long loopTime;
 
+float self_balance_pid_setpoint=0;
 
-unsigned long previousMilliEnc = 0;
-unsigned long previousMilliSerialLog = 0;
-const long intervalEnc = PID__MOTOR_SAMPLE_TIME;
+uint8_t turning_speed=3;
+
 
 
 bool running=false;
 
+//-------------------------- GIRO DATA -------------------------------------//
+MPU6050 mpu;
+int16_t Giro_AccY;
+int16_t Giro_AccZ;
+int16_t Giro_RotX;
+
+volatile int motorPower, Giro_Rate;
+volatile float Giro_AccAngle, Giro_Angle, Giro_FilteredAngle, Giro_PrevAngle=0, error, prevError=0, errorSum=0;
+
+//-------------------------- LOGGING FLAGS -----------------------------//
 bool ConnectGiroToMot=true;
 bool PrintPidCfgValues=true;
 bool PrintP1CfgValues=true;
 bool PrintP2CfgValues=true;
 bool PrintP3CfgValues=true;
 
-
+//----------------------- PID STRUCTURES -----------------------------//
 PIDConfig_e *Mot0_PidCtl;
 PIDConfig_e *Mot1_PidCtl;
 PIDConfig_e *Giro_PidCtl;
@@ -49,7 +65,9 @@ PID *Mot1_Pid;
 PID *Giro_Pid;
 
 
-void getPidConfigsFromEEPROM() {
+//------------------------------------------------------------------------- READ AND WRITE PIDS TO EEPROM -----------------------------------------------------------------------//
+void getPidConfigsFromEEPROM()
+{
     uint16_t addr=EEPROM_PID_CONFIGS_ADDR;
 
     ReadPidCfgFromEEPROM(addr,Mot0_PidCtl);
@@ -60,7 +78,8 @@ void getPidConfigsFromEEPROM() {
 }
 
 
-void putPidConfigToEEPROM() {
+void putPidConfigToEEPROM()
+{
 
     uint16_t addr=EEPROM_PID_CONFIGS_ADDR;
 
@@ -72,8 +91,9 @@ void putPidConfigToEEPROM() {
 }
 
 
-// Init the pids for the 2 motors and the giro
-void initPidControls() {
+//-------------------------------------------------------------------------- PID INITIALIZATION ----------------------------------------------------------------------------------------------//
+void initPidControls()
+{
     Mot0_PidCtl= new PIDConfig_e(MOT0__KP,MOT0__KI,MOT0__KD,0);
     Mot1_PidCtl= new PIDConfig_e(MOT1__KP,MOT1__KI,MOT1__KD,0);
     Giro_PidCtl= new PIDConfig_e(GIRO__KP,GIRO__KI,GIRO__KD,GIRO__TARGET_ANGLE);
@@ -101,13 +121,12 @@ void initPidControls() {
 }
 
 
+//-------------------------------------------------------------------------------- SERIAL DATA LOGGING --------------------------------------------------------------------------//
 
-
-//Log each interesting value for the cpu app; each call will print a single value
-void printData() {
+void printData()
+{
     static uint8_t i=ARD_START_PRINT_IDX;
     static uint8_t old_i=ARD_START_PRINT_IDX;
-
 
     if (Serial.availableForWrite()<6) {
         return;
@@ -234,15 +253,20 @@ void printData() {
 
 
 
+
+
+//---------------------------------------------------------------------------------  SERIAL READ --------------------------------------------------------------------------------//
 const char Ser_EndMarker = '\n';
 char Ser_Buffer[SERIAL__MY_BUF_SIZE]; // an array to store the received data
 boolean Ser_NewData = false;
-void Ser_ReceiveData() {
+
+void Ser_ReceiveData()
+{
     static byte ndx = 0;
     char rc;
 
     // if (Serial.available() > 0) {
-    while (Serial.available() > 0 && Ser_NewData == false) {
+    while (Ser_NewData == false && Serial.available() > 0) {
         rc = Serial.read();
 
         if (rc != Ser_EndMarker) {
@@ -259,19 +283,11 @@ void Ser_ReceiveData() {
     }
 }
 
+//---------------------------------------------------------------- SERIAL CMD PROCESSING -----------------------------------------------------------------------------//
 
 
-
-
-bool DirUp=false;
-bool DirDn=false;
-bool DirRight=false;
-bool DirLeft=false;
-
-uint16_t RemoteCmd=0;
-unsigned long RemoteCmdRecTime=0;
-
-void Serial_ParseData() {
+void Serial_ParseData()
+{
     if (Ser_NewData==false) return;
 
     uint8_t target=Ser_Buffer[0];
@@ -365,24 +381,54 @@ void Serial_ParseData() {
     Ser_NewData=false;
 }
 
+//----------------------------------------------------------------------------- SERIAL TASK------------------------------------------------------------------------------------//
 
-void UpdateEncoderValues() {
-    Mot0_PidCtl->Input=Mot0_Enc;
-    Mot1_PidCtl->Input=Mot1_Enc;
+void SerialCom()
+{
+    static unsigned long previousMilliSerialLog=0;
+    unsigned long currentMillis = millis();
 
-    Mot0_Enc=0;
-    Mot1_Enc=0;
+    if (currentMillis - previousMilliSerialLog >= SERIAL_LOG_INTERVAL) {
+        previousMilliSerialLog=currentMillis;
+
+        Ser_ReceiveData();
+        Serial_ParseData();
+
+        /*   loopTime=micros()-loopTime;
+        Serial.print("MC: ");
+        Serial.println(loopTime);
+        */
+
+        printData();
+    }
 }
 
+//------------------------------------------------------------------------------------ ENCODER VALUE UPDATE --------------------------------------//
+void UpdateEncoderValues()
+{
+    static unsigned long previousMilliEnc = 0;
+    unsigned long currentMillis = millis();
 
-unsigned long Giro_currTime;
-unsigned long Giro_loopTime;
-unsigned long Giro_prevTime;
+    if (currentMillis - previousMilliEnc >= ENC__SAMPLE_TIME) {
+        previousMilliEnc=currentMillis;
 
-void Giro_ReadData() {
+        Mot0_PidCtl->Input=Mot0_Enc;
+        Mot1_PidCtl->Input=Mot1_Enc;
 
-    Giro_currTime = millis();
-    Giro_loopTime = Giro_currTime - Giro_prevTime;
+        Mot0_Enc=0;
+        Mot1_Enc=0;
+    }
+}
+
+//--------------------------------------------------------------------------------- GIRO UPDATE ---------------------------------------------------------//
+
+void Giro_ReadData()
+{
+    static unsigned long Giro_prevTime=0;
+
+
+    unsigned long Giro_currTime = millis();
+    unsigned long Giro_loopTime = Giro_currTime - Giro_prevTime;
     Giro_prevTime = Giro_currTime;
 
     // read acceleration and gyroscope values
@@ -406,7 +452,8 @@ void Giro_ReadData() {
 
 
 
-void setup() {
+void setup()
+{
     Serial.begin(SERIAL__BAUD_RATE);
     LOG("Setup:Serial Initialized");
 
@@ -436,41 +483,15 @@ void setup() {
     LOG("Setup: PID initialized");
 
     LOG("Setup: Done");
-
-
-    Serial.println("Pid config for P1: ");
-    Serial.println("Ki: ");
-    Serial.print(Mot1_PidCtl->Ki);
-    Serial.println("Kp: ");
-    Serial.print(Mot1_PidCtl->Kp);
-    Serial.println("Kd: ");
-    Serial.print(Mot1_PidCtl->Kd);
-    Serial.println("Done!");
-
 }
 
-unsigned long loopTime;
-
-float self_balance_pid_setpoint=0;
 
 
-uint8_t turning_speed=3;
-
-void loop() {
-    loopTime=micros();
-
-
-    unsigned long currentMillis = millis();
-    if (currentMillis - previousMilliEnc >= intervalEnc) {
-        previousMilliEnc=currentMillis;
-        UpdateEncoderValues();
-    }
-
-    //---------------------------- GIRO---------------------------------------------
+void loop()
+{
 
     Giro_ReadData();
     // Giro_PidCtl->Input+=self_balance_pid_setpoint;
-
 
     if(RemoteCmd & B00000100) {                                           //If the third bit of the receive byte is set change the left and right variable to turn the robot to the right
         if(Giro_PidCtl->Setpoint > GIRO__TARGET_ANGLE - 7) Giro_PidCtl->Setpoint -= 0.1;                            //Slowly change the setpoint angle so the robot starts leaning forewards
@@ -512,25 +533,21 @@ void loop() {
     }
 
     //--------------------------- MOTORS --------------------------------------
+    UpdateEncoderValues();
     Mot0_Pid->Compute();
     Mot1_Pid->Compute();
 
     if  ( (running==false) &&
-            (Giro_PidCtl->Input > GIRO__TARGET_ANGLE-3 ) &&
-            (Giro_PidCtl->Input < GIRO__TARGET_ANGLE+3 )
+          (Giro_PidCtl->Input > GIRO__TARGET_ANGLE-3 ) &&
+          (Giro_PidCtl->Input < GIRO__TARGET_ANGLE+3 )
         ) {
         running = true;
     }
 
-
-
-
-
-
     if((ConnectGiroToMot==true) &&
-            ((running==false) ||
-             (Giro_PidCtl->Input > 50 || Giro_PidCtl->Input < -50) || //we fell
-             ((Giro_PidCtl->Output >1) && (Giro_PidCtl->Output < 1))) //somewhat equilibrium
+       ((running==false) ||
+        (Giro_PidCtl->Input > 50 || Giro_PidCtl->Input < -50) || //we fell
+        ((Giro_PidCtl->Output >1) && (Giro_PidCtl->Output < 1))) //somewhat equilibrium
       ) {
         Motors_SetSpeed(0,0);
         running=false;
@@ -544,24 +561,7 @@ void loop() {
 
     }
 
-
-
-
-    if (currentMillis - previousMilliSerialLog >= SERIAL_LOG_INTERVAL) {
-        previousMilliSerialLog=currentMillis;
-
-
-        Ser_ReceiveData();
-        Serial_ParseData();
-
-        /*   loopTime=micros()-loopTime;
-        Serial.print("MC: ");
-        Serial.println(loopTime);
-        */
-
-        printData();
-
-    }
+    SerialCom();
 
 
 }

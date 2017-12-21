@@ -10,6 +10,7 @@
 #define UTILS_H_
 
 #include <EEPROM.h>
+#include <Configs.h>
 
 struct PIDConfig_e {
     double Kp;
@@ -19,7 +20,8 @@ struct PIDConfig_e {
     double Input;
     double Output;
 
-    PIDConfig_e(double kp, double ki, double kd, double setpoint) {
+    PIDConfig_e(double kp, double ki, double kd, double setpoint)
+    {
         Kp=kp;
         Kd=kd;
         Ki=ki;
@@ -27,12 +29,14 @@ struct PIDConfig_e {
     }
 } ;
 
-inline void LOG(const char* x) {
-    Serial.write(255);
+inline void LOG(const char* x)
+{
+    Serial.write(ARD_LOG);
     Serial.println(x);
 }
 
-void WritePidCfgToEEPROM(uint16_t addr,PIDConfig_e *cfg) {
+void WritePidCfgToEEPROM(uint16_t addr,PIDConfig_e *cfg)
+{
     EEPROM.put(addr, cfg->Kp);
     addr+=sizeof(double);
     EEPROM.put(addr, cfg->Ki);
@@ -40,7 +44,8 @@ void WritePidCfgToEEPROM(uint16_t addr,PIDConfig_e *cfg) {
     EEPROM.put(addr,cfg->Kd);
 }
 
-void ReadPidCfgFromEEPROM(uint16_t addr,PIDConfig_e *cfg) {
+void ReadPidCfgFromEEPROM(uint16_t addr,PIDConfig_e *cfg)
+{
     EEPROM.get(addr, cfg->Kp);
     addr+=sizeof(double);
     EEPROM.get(addr, cfg->Ki);
