@@ -11,25 +11,28 @@
 #include "Configs.h"
 #include "Utils.h"
 
-
+//------------------------------ SONAR --------------------------------------------------//
 NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
 int distanceCm;
 
-
-bool DirUp=false;
-bool DirDn=false;
-bool DirRight=false;
-bool DirLeft=false;
-
-uint16_t RemoteCmd=0;
+//----------------------------- REMOTE CONTROL --------------------------------//
+bool RemoteDirUp=false;
+bool RemoteDirDn=false;
+bool RemoteDirRight=false;
+bool RemoteDirLeft=false;
+bool RemoteBtnZ=false;
+bool RemoteBtnC=false;
+uint16_t RemoteControlByte=0;
 unsigned long RemoteCmdRecTime=0;
-
-
-float self_balance_pid_setpoint=0;
 
 uint8_t turning_speed=3;
 
+//---------------------------------------------------------------------------------------//
 
+float self_balance_pid_setpoint=0;
+
+
+//--------------------------- STATISTICS --------------------------------------//
 unsigned long normalLoopTime=0;
 unsigned long serialLoopTime=0;
 
@@ -40,8 +43,15 @@ int16_t Giro_AccY;
 int16_t Giro_AccZ;
 int16_t Giro_RotX;
 
-volatile int motorPower, Giro_Rate;
-volatile float Giro_AccAngle, Giro_Angle, Giro_FilteredAngle, Giro_PrevAngle=0, error, prevError=0, errorSum=0;
+volatile int motorPower;
+volatile int Giro_Rate;
+volatile float Giro_AccAngle;
+volatile float Giro_Angle;
+volatile float Giro_FilteredAngle;
+volatile float Giro_PrevAngle=0;
+volatile float error;
+volatile float prevError=0;
+volatile float errorSum=0;
 
 //-------------------------- LOGGING FLAGS -----------------------------//
 bool ConnectGiroToMot=true;
@@ -52,10 +62,11 @@ bool PrintP3CfgValues=true;
 bool PrintCycleTimeStats=true;
 
 //=-------------------- OTHER FLAGS -----------------------------------//
-bool running=false;
-bool getUp=false;
-bool inEquilibrum=false;
+bool stateRunning=true;
+bool stateFallen=false;
+bool stateEquilibrum=true;
 
+bool getUp=false;
 //----------------------- PID STRUCTURES -----------------------------//
 PIDConfig_e *Mot0_PidCtl;
 PIDConfig_e *Mot1_PidCtl;
@@ -121,6 +132,34 @@ void initPidControls()
 
 }
 
+//-------------------------------------------------------------------------------- Remote Control --------------------------------------------------------------------------------------//
+
+void ParseRemoteControlByte(uint8_t ctrl)
+{
+    if ((ctrl && 1) > 0) {
+        RemoteBtnC=true;
+    }
+
+    if ((ctrl && 2) > 0) {
+        RemoteBtnZ=true;
+    }
+
+    if ((ctrl && 4) > 0) {
+        RemoteDirLeft=true;
+    }
+
+    if ((ctrl && 8) > 0) {
+        RemoteDirRight=true;
+    }
+
+    if ((ctrl && 16) > 0) {
+        RemoteDirUp=true;
+    }
+
+    if ((ctrl && 32) > 0) {
+        RemoteDirDn=true;
+    }
+}
 
 //-------------------------------------------------------------------------------- SERIAL DATA LOGGING --------------------------------------------------------------------------//
 void Serial_PrintStats()
@@ -395,6 +434,9 @@ void Serial_ParseData()
     case CUTE_CYCLE_TIME_PRINTS_OFF:
         PrintCycleTimeStats=false;
         break;
+    case REMOTE_CONTROL_BYTE:
+        ParseRemoteControlByte(val[0]);
+        break;
     default:
         break;
 
@@ -506,9 +548,77 @@ void setup()
 void loop()
 {
     unsigned long oldTime=millis();
+    //-------------------------------------------------------------
+
+    if (!ConnectGiroToMot) { //motors controlled by pc
+        Giro_ReadData();
+        Giro_Pid->Compute();
+        UpdateEncoderValues();
+        Mot0_Pid->Compute();
+        Mot1_Pid->Compute();
+    } else { //motors controlled by giro -> we are running
+
+        Giro_ReadData();
+        Giro_Pid->Compute();
+        Mot0_PidCtl->Setpoint=Giro_PidCtl->Output;
+        Mot1_PidCtl->Setpoint=Giro_PidCtl->Output;
+        UpdateEncoderValues();
+        Mot0_Pid->Compute();
+        Mot1_Pid->Compute();
+
+        //decisions based on angle
+        if (stateRunning==false || Giro_PidCtl->Input > 50 || Giro_PidCtl->Input < -50) { //we fell
+            stateRunning=false;
+            Mot0_PidCtl->Output=0;
+            Mot1_PidCtl->Output=0;
+
+            Mot0_Pid->SetMode(MANUAL);
+            Mot1_Pid->SetMode(MANUAL);
+            Giro_Pid->SetMode(MANUAL);
+        }
+
+        if (stateRunning==false && Giro_PidCtl->Input > Giro_PidCtl->Setpoint -3  && Giro_PidCtl->Input < Giro_PidCtl->Setpoint +3) {
+            stateRunning = true;
+
+            Mot0_Pid->SetMode(AUTOMATIC);
+            Mot1_Pid->SetMode(AUTOMATIC);
+            Giro_Pid->SetMode(AUTOMATIC);
+
+            getUp=false;
+        }
+
+
+        if (getUp==true) {
+            if (Giro_PidCtl->Input<0) {
+                Mot0_PidCtl->Output=-255;
+                Mot1_PidCtl->Output=-255;
+            } else {
+                Mot0_PidCtl->Output=255;
+                Mot1_PidCtl->Output=255;
+            }
+        }
+    }
+
+    Motors_SetSpeed(Mot0_PidCtl->Output,Mot1_PidCtl->Output);
+
+    //------------------------------------------------------------
+    bool serialCycle=SerialCom();
+
+    unsigned long curTime=millis();
+    if (serialCycle==true) {
+        serialLoopTime=curTime-oldTime;
+    } else {
+        normalLoopTime=curTime-oldTime;
+    }
+}
+
+
+void loop1()
+{
+    unsigned long oldTime=millis();
 
     Giro_ReadData();
-    if (inEquilibrum==false) Giro_Pid->Compute();
+    if (stateEquilibrum==false) Giro_Pid->Compute();
 
     if (ConnectGiroToMot==true) {
         Mot0_PidCtl->Setpoint=Giro_PidCtl->Output;
@@ -516,32 +626,32 @@ void loop()
     }
 
     UpdateEncoderValues();
-    if (inEquilibrum==false) Mot0_Pid->Compute();
-    if (inEquilibrum==false) Mot1_Pid->Compute();
+    if (stateEquilibrum==false) Mot0_Pid->Compute();
+    if (stateEquilibrum==false) Mot1_Pid->Compute();
 
-    if  ( (running==false) &&
+    if  ( (stateRunning==false) &&
           (Giro_PidCtl->Input > Giro_PidCtl->Setpoint -3 ) &&
           (Giro_PidCtl->Input < Giro_PidCtl->Setpoint +3 )
         ) {
-        running = true;
+        stateRunning = true;
         getUp=false;
     }
 
     if (ConnectGiroToMot==true) {
-        if(running && (Giro_PidCtl->Input > 50 || Giro_PidCtl->Input < -50)) { //did we fell?
-            running=false;
+        if(stateRunning && (Giro_PidCtl->Input > 50 || Giro_PidCtl->Input < -50)) { //did we fell?
+            stateRunning=false;
         }
 
         if ((Giro_PidCtl->Input > Giro_PidCtl->Setpoint -1 ) &&
             (Giro_PidCtl->Input < Giro_PidCtl->Setpoint +1)) { //are we in equilibrum?
             Mot0_PidCtl->Output=0;
             Mot1_PidCtl->Output=0;
-            inEquilibrum=true;
+            stateEquilibrum=true;
         } else {
-            inEquilibrum=false;
+            stateEquilibrum=false;
         }
 
-        if((getUp==false) && (running==false)) { // should we stop?
+        if((getUp==false) && (stateRunning==false)) { // should we stop?
             Mot0_PidCtl->Output=0;
             Mot1_PidCtl->Output=0;
         }
@@ -615,20 +725,20 @@ void loop2()
     Mot0_Pid->Compute();
     Mot1_Pid->Compute();
 
-    if  ( (running==false) &&
+    if  ( (stateRunning==false) &&
           (Giro_PidCtl->Input > GIRO__TARGET_ANGLE-3 ) &&
           (Giro_PidCtl->Input < GIRO__TARGET_ANGLE+3 )
         ) {
-        running = true;
+        stateRunning = true;
     }
 
     if((ConnectGiroToMot==true) &&
-       ((running==false) ||
+       ((stateRunning==false) ||
         (Giro_PidCtl->Input > 50 || Giro_PidCtl->Input < -50) || //we fell
         ((Giro_PidCtl->Output >1) && (Giro_PidCtl->Output < 1))) //somewhat equilibrium
       ) {
         Motors_SetSpeed(0,0);
-        running=false;
+        stateRunning=false;
         self_balance_pid_setpoint = 0;
     } else {
         Motors_SetSpeed(Mot0_PidCtl->Output,Mot1_PidCtl->Output);
