@@ -25,7 +25,7 @@ bool RemoteBtnC=false;
 uint16_t RemoteControlByte=0;
 unsigned long RemoteCmdRecTime=0;
 
-uint8_t turning_speed=3;
+uint8_t turning_speed=6;
 
 //---------------------------------------------------------------------------------------//
 
@@ -78,8 +78,7 @@ PID *Giro_Pid;
 
 
 //------------------------------------------------------------------------- READ AND WRITE PIDS TO EEPROM -----------------------------------------------------------------------//
-void getPidConfigsFromEEPROM()
-{
+void getPidConfigsFromEEPROM() {
     uint16_t addr=EEPROM_PID_CONFIGS_ADDR;
 
     ReadPidCfgFromEEPROM(addr,Mot0_PidCtl);
@@ -90,8 +89,7 @@ void getPidConfigsFromEEPROM()
 }
 
 
-void putPidConfigToEEPROM()
-{
+void putPidConfigToEEPROM() {
 
     uint16_t addr=EEPROM_PID_CONFIGS_ADDR;
 
@@ -104,8 +102,7 @@ void putPidConfigToEEPROM()
 
 
 //-------------------------------------------------------------------------- PID INITIALIZATION ----------------------------------------------------------------------------------------------//
-void initPidControls()
-{
+void initPidControls() {
     Mot0_PidCtl= new PIDConfig_e(MOT0__KP,MOT0__KI,MOT0__KD,0);
     Mot1_PidCtl= new PIDConfig_e(MOT1__KP,MOT1__KI,MOT1__KD,0);
     Giro_PidCtl= new PIDConfig_e(GIRO__KP,GIRO__KI,GIRO__KD,GIRO__TARGET_ANGLE);
@@ -134,36 +131,34 @@ void initPidControls()
 
 //-------------------------------------------------------------------------------- Remote Control --------------------------------------------------------------------------------------//
 
-void ParseRemoteControlByte(uint8_t ctrl)
-{
-    if ((ctrl && 1) > 0) {
+void ParseRemoteControlByte(uint8_t ctrl) {
+    if (ctrl & 1) {
         RemoteBtnC=true;
     }
 
-    if ((ctrl && 2) > 0) {
+    if (ctrl & 2) {
         RemoteBtnZ=true;
     }
 
-    if ((ctrl && 4) > 0) {
+    if (ctrl & 4) {
         RemoteDirLeft=true;
     }
 
-    if ((ctrl && 8) > 0) {
+    if (ctrl & 8) {
         RemoteDirRight=true;
     }
 
-    if ((ctrl && 16) > 0) {
+    if (ctrl & 16) {
         RemoteDirUp=true;
     }
 
-    if ((ctrl && 32) > 0) {
+    if (ctrl & 32) {
         RemoteDirDn=true;
     }
 }
 
 //-------------------------------------------------------------------------------- SERIAL DATA LOGGING --------------------------------------------------------------------------//
-void Serial_PrintStats()
-{
+void Serial_PrintStats() {
     static uint8_t i=ARD_START_PRINT_IDX;
     static uint8_t old_i=ARD_START_PRINT_IDX;
 
@@ -314,8 +309,7 @@ const char Ser_EndMarker = '\n';
 char Ser_Buffer[SERIAL__MY_BUF_SIZE]; // an array to store the received data
 boolean Ser_NewData = false;
 
-void Serial_LookForData()
-{
+void Serial_LookForData() {
     static byte ndx = 0;
     char rc;
 
@@ -338,8 +332,7 @@ void Serial_LookForData()
 }
 
 //---------------------------------------------------------------- SERIAL CMD PROCESSING -----------------------------------------------------------------------------//
-void Serial_ParseData()
-{
+void Serial_ParseData() {
     if (Ser_NewData==false) return;
 
     uint8_t target=Ser_Buffer[0];
@@ -446,8 +439,7 @@ void Serial_ParseData()
 }
 
 //----------------------------------------------------------------------------- SERIAL TASK------------------------------------------------------------------------------------//
-bool SerialCom()
-{
+bool SerialCom() {
     static unsigned long previousMilliSerialLog=0;
     unsigned long currentMillis = millis();
 
@@ -463,26 +455,26 @@ bool SerialCom()
 }
 
 //------------------------------------------------------------------------------------ ENCODER VALUE UPDATE --------------------------------------//
-void UpdateEncoderValues()
-{
+void UpdateEncoderValues() {
     static unsigned long previousMilliEnc = 0;
     unsigned long currentMillis = millis();
 
     if (currentMillis - previousMilliEnc >= ENC__SAMPLE_TIME) {
         previousMilliEnc=currentMillis;
 
+        noInterrupts();
         Mot0_PidCtl->Input=Mot0_Enc;
         Mot1_PidCtl->Input=Mot1_Enc;
 
         Mot0_Enc=0;
         Mot1_Enc=0;
+        interrupts();
     }
 }
 
 //--------------------------------------------------------------------------------- GIRO UPDATE ---------------------------------------------------------//
 
-void Giro_ReadData()
-{
+void Giro_ReadData() {
     static unsigned long Giro_prevTime=0;
 
 
@@ -511,8 +503,7 @@ void Giro_ReadData()
 
 
 
-void setup()
-{
+void setup() {
     Serial.begin(SERIAL__BAUD_RATE);
     LOG("Setup:Serial Initialized");
 
@@ -545,9 +536,16 @@ void setup()
 }
 
 
-void loop()
-{
-    unsigned long oldTime=millis();
+unsigned long cmdLife=30;
+unsigned long cmdStartTime=0;
+bool goUp=false;
+bool goDn=false;
+bool goNormal=false;
+bool goLeft=false;
+bool goRight=false;
+
+void loop() {
+    unsigned long enterTime=millis();
     //-------------------------------------------------------------
 
     if (!ConnectGiroToMot) { //motors controlled by pc
@@ -558,13 +556,91 @@ void loop()
         Mot1_Pid->Compute();
     } else { //motors controlled by giro -> we are running
 
+
+        if (RemoteBtnZ == true) {
+            getUp = true;
+            RemoteBtnZ = false;
+        }
+
+        //Directions
+        if(enterTime-cmdStartTime>cmdLife) {
+            goUp=false;
+            goDn=false;
+            goLeft=false;
+            goRight=false;
+
+            goNormal=true;
+        }
+
+
+        if(RemoteDirUp == true) {
+            RemoteDirUp = false;
+            goNormal = false;
+            goUp = true;
+            cmdStartTime=enterTime;
+        }
+        if(RemoteDirDn == true) {
+            RemoteDirDn = false;
+            goNormal = false;
+            goDn = true;
+            cmdStartTime=enterTime;
+        }
+
+        if(RemoteDirLeft == true) {
+            RemoteDirLeft = false;
+            goLeft = true;
+            cmdStartTime=enterTime;
+        }
+        if(RemoteDirRight == true) {
+            RemoteDirRight = false;
+            goRight = true;
+            cmdStartTime=enterTime;
+        }
+
+
+
+        //target angle
         Giro_ReadData();
+        if(goUp==true) {
+            if(Giro_PidCtl->Setpoint > GIRO__TARGET_ANGLE - 19) Giro_PidCtl->Setpoint -= 0.1;
+            //  if(Giro_PidCtl->Output > 20 * -1)Giro_PidCtl->Setpoint -= 0.05;
+        }
+        if(goDn == true) {
+            if(Giro_PidCtl->Setpoint < GIRO__TARGET_ANGLE + 19) Giro_PidCtl->Setpoint += 0.1;
+            // if(Giro_PidCtl->Output < 20) Giro_PidCtl->Setpoint += 0.05;
+        }
+
+        if(goNormal==true) {
+            if(Giro_PidCtl->Setpoint > GIRO__TARGET_ANGLE + 3) Giro_PidCtl->Setpoint -= 0.1;
+            else if(Giro_PidCtl->Setpoint < GIRO__TARGET_ANGLE-3)Giro_PidCtl->Setpoint += 0.1;
+            else {
+                Giro_PidCtl->Setpoint = GIRO__TARGET_ANGLE;
+                goNormal=false;
+            }
+
+        }
+
+
         Giro_Pid->Compute();
         Mot0_PidCtl->Setpoint=Giro_PidCtl->Output;
         Mot1_PidCtl->Setpoint=Giro_PidCtl->Output;
         UpdateEncoderValues();
+
+        if(goLeft==true) {
+            // Mot0_PidCtl->Input -= turning_speed;
+            Mot1_PidCtl->Input += turning_speed;
+        }
+        if(goRight==true) {
+            Mot0_PidCtl->Input += turning_speed;
+            // Mot1_PidCtl->Input -= turning_speed;
+        }
+
         Mot0_Pid->Compute();
         Mot1_Pid->Compute();
+
+
+
+
 
         //decisions based on angle
         if (stateRunning==false || Giro_PidCtl->Input > 50 || Giro_PidCtl->Input < -50) { //we fell
@@ -577,7 +653,7 @@ void loop()
             Giro_Pid->SetMode(MANUAL);
         }
 
-        if (stateRunning==false && Giro_PidCtl->Input > Giro_PidCtl->Setpoint -3  && Giro_PidCtl->Input < Giro_PidCtl->Setpoint +3) {
+        if (stateRunning==false && (Giro_PidCtl->Input > Giro_PidCtl->Setpoint -3)  && (Giro_PidCtl->Input < Giro_PidCtl->Setpoint +3)) {
             stateRunning = true;
 
             Mot0_Pid->SetMode(AUTOMATIC);
@@ -587,9 +663,12 @@ void loop()
             getUp=false;
         }
 
+        if (stateRunning==true && getUp==true) {
+            getUp=false;
+        }
 
         if (getUp==true) {
-            if (Giro_PidCtl->Input<0) {
+            if (Giro_PidCtl->Input>0) {
                 Mot0_PidCtl->Output=-255;
                 Mot1_PidCtl->Output=-255;
             } else {
@@ -604,152 +683,12 @@ void loop()
     //------------------------------------------------------------
     bool serialCycle=SerialCom();
 
-    unsigned long curTime=millis();
+    unsigned long exitTime=millis();
     if (serialCycle==true) {
-        serialLoopTime=curTime-oldTime;
+        serialLoopTime=exitTime-enterTime;
     } else {
-        normalLoopTime=curTime-oldTime;
+        normalLoopTime=exitTime-enterTime;
     }
 }
 
 
-void loop1()
-{
-    unsigned long oldTime=millis();
-
-    Giro_ReadData();
-    if (stateEquilibrum==false) Giro_Pid->Compute();
-
-    if (ConnectGiroToMot==true) {
-        Mot0_PidCtl->Setpoint=Giro_PidCtl->Output;
-        Mot1_PidCtl->Setpoint=Giro_PidCtl->Output;
-    }
-
-    UpdateEncoderValues();
-    if (stateEquilibrum==false) Mot0_Pid->Compute();
-    if (stateEquilibrum==false) Mot1_Pid->Compute();
-
-    if  ( (stateRunning==false) &&
-          (Giro_PidCtl->Input > Giro_PidCtl->Setpoint -3 ) &&
-          (Giro_PidCtl->Input < Giro_PidCtl->Setpoint +3 )
-        ) {
-        stateRunning = true;
-        getUp=false;
-    }
-
-    if (ConnectGiroToMot==true) {
-        if(stateRunning && (Giro_PidCtl->Input > 50 || Giro_PidCtl->Input < -50)) { //did we fell?
-            stateRunning=false;
-        }
-
-        if ((Giro_PidCtl->Input > Giro_PidCtl->Setpoint -1 ) &&
-            (Giro_PidCtl->Input < Giro_PidCtl->Setpoint +1)) { //are we in equilibrum?
-            Mot0_PidCtl->Output=0;
-            Mot1_PidCtl->Output=0;
-            stateEquilibrum=true;
-        } else {
-            stateEquilibrum=false;
-        }
-
-        if((getUp==false) && (stateRunning==false)) { // should we stop?
-            Mot0_PidCtl->Output=0;
-            Mot1_PidCtl->Output=0;
-        }
-    }
-    Motors_SetSpeed(Mot0_PidCtl->Output,Mot1_PidCtl->Output);
-
-
-    bool serialCycle=SerialCom();
-
-    unsigned long curTime=millis();
-    if (serialCycle==true) {
-        serialLoopTime=curTime-oldTime;
-    } else {
-        normalLoopTime=curTime-oldTime;
-    }
-
-}
-
-
-
-void loop2()
-{
-
-    Giro_ReadData();
-    // Giro_PidCtl->Input+=self_balance_pid_setpoint;
-
-    /*
-        if(RemoteCmd & B00000100) {                                           //If the third bit of the receive byte is set change the left and right variable to turn the robot to the right
-            if(Giro_PidCtl->Setpoint > GIRO__TARGET_ANGLE - 7) Giro_PidCtl->Setpoint -= 0.1;                            //Slowly change the setpoint angle so the robot starts leaning forewards
-            if(Giro_PidCtl->Output > 20 * -1)Giro_PidCtl->Setpoint -= 0.05;            //Slowly change the setpoint angle so the robot starts leaning forewards
-        }
-        if(RemoteCmd & B00001000) {                                           //If the forth bit of the receive byte is set change the left and right variable to turn the robot to the right
-            if(Giro_PidCtl->Setpoint < GIRO__TARGET_ANGLE + 7) Giro_PidCtl->Setpoint += 0.1;                             //Slowly change the setpoint angle so the robot starts leaning backwards
-            if(Giro_PidCtl->Output < 20) Giro_PidCtl->Setpoint += 0.05;                 //Slowly change the setpoint angle so the robot starts leaning backwards
-        }
-
-        if(!(RemoteCmd & B00001100)) {                                        //Slowly reduce the setpoint to zero if no foreward or backward command is given
-            if(Giro_PidCtl->Setpoint > 0.5)Giro_PidCtl->Setpoint -=0.05;                              //If the PID setpoint is larger then 0.5 reduce the setpoint with 0.05 every loop
-            else if(Giro_PidCtl->Setpoint < -0.5)Giro_PidCtl->Setpoint +=0.05;                        //If the PID setpoint is smaller then -0.5 increase the setpoint with 0.05 every loop
-            else Giro_PidCtl->Setpoint = GIRO__TARGET_ANGLE;                                                  //If the PID setpoint is smaller then 0.5 or larger then -0.5 set the setpoint to 0
-        }
-    */
-    Giro_Pid->Compute();
-
-    /*
-        // Remote go fwd/bck
-        if(RemoteCmd & B00000001) {                                           //If the first bit of the receive byte is set change the left and right variable to turn the robot to the left
-            Mot0_PidCtl->Input += turning_speed;                                       //Increase the left motor speed
-            Mot1_PidCtl->Input -= turning_speed;                                      //Decrease the right motor speed
-        }
-        if(RemoteCmd & B00000010) {                                           //If the second bit of the receive byte is set change the left and right variable to turn the robot to the right
-            Mot0_PidCtl->Input -= turning_speed;                                       //Decrease the left motor speed
-            Mot1_PidCtl->Input += turning_speed;                                      //Increase the right motor speed
-        }
-
-
-        if (RemoteCmd ) {
-            if(millis()-RemoteCmdRecTime >=40) {
-                RemoteCmd=0;
-            }
-        }
-    */
-
-    if (ConnectGiroToMot==true) {
-        Mot0_PidCtl->Setpoint=Giro_PidCtl->Output;
-        Mot1_PidCtl->Setpoint=Giro_PidCtl->Output;
-    }
-
-    //--------------------------- MOTORS --------------------------------------
-    UpdateEncoderValues();
-    Mot0_Pid->Compute();
-    Mot1_Pid->Compute();
-
-    if  ( (stateRunning==false) &&
-          (Giro_PidCtl->Input > GIRO__TARGET_ANGLE-3 ) &&
-          (Giro_PidCtl->Input < GIRO__TARGET_ANGLE+3 )
-        ) {
-        stateRunning = true;
-    }
-
-    if((ConnectGiroToMot==true) &&
-       ((stateRunning==false) ||
-        (Giro_PidCtl->Input > 50 || Giro_PidCtl->Input < -50) || //we fell
-        ((Giro_PidCtl->Output >1) && (Giro_PidCtl->Output < 1))) //somewhat equilibrium
-      ) {
-        Motors_SetSpeed(0,0);
-        stateRunning=false;
-        self_balance_pid_setpoint = 0;
-    } else {
-        Motors_SetSpeed(Mot0_PidCtl->Output,Mot1_PidCtl->Output);
-        //if(Mot0_PidCtl.Output < -1)self_balance_pid_setpoint += 0.001;                  //Increase the self_balance_pid_setpoint if the robot is still moving forewards
-        //if(Mot0_PidCtl.Output > 1)self_balance_pid_setpoint -= 0.001;                  //Decrease the self_balance_pid_setpoint if the robot is still moving backwards
-        //if(Mot1_PidCtl.Output < -1)self_balance_pid_setpoint += 0.001;                  //Increase the self_balance_pid_setpoint if the robot is still moving forewards
-        //if(Mot1_PidCtl.Output > 1)self_balance_pid_setpoint -= 0.001;                  //Decrease the self_balance_pid_setpoint if the robot is still moving backwards
-
-    }
-
-    SerialCom();
-
-
-}
